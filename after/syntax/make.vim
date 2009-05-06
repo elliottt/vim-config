@@ -1,0 +1,3 @@
+setlocal noexpandtab
+setlocal nosmarttab
+setlocal nocindent
