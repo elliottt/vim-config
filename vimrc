@@ -46,3 +46,6 @@ set textwidth=80
 " Highlight trailing space, and tab characters
 set list lcs=tab:>-,trail:.
 
+" Tab navigation
+nmap <C-n> gt
+nmap <C-p> gT
