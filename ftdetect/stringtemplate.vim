@@ -1,1 +1,1 @@
-au! BufNewFile,BufRead *.st setfiletype xml
+au! BufNewFile,BufRead *.st set filetype=xml

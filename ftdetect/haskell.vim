@@ -1,1 +1,1 @@
-au! BufNewFile,BufRead *.hsc setfiletype haskell
+au! BufNewFile,BufRead *.hsc set filetype=haskell
