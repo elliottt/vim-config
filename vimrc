@@ -34,7 +34,7 @@ if has("spell")
 endif
 
 " Enable filetype detection
-filetype on
+filetype plugin indent on
 
 " Highlight undefined, trace and error
 let hs_highlight_debug = "true"
