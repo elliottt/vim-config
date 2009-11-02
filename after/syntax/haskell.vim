@@ -20,3 +20,7 @@ map pL O{-# LANGUAGE  #-}<Esc>hhhi
 
 " Insert an inline pragma
 map pI O{-# INLINE  #-}<Esc>hhhi
+
+" Set the tab size
+set tabstop=2
+set shiftwidth=2
