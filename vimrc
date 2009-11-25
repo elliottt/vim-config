@@ -49,3 +49,7 @@ set list lcs=tab:>-,trail:.
 " Tab navigation
 nmap <C-n> gt
 nmap <C-p> gT
+
+" Disable the help key
+nmap <F1> <Esc>
+imap <F1> <Esc>
