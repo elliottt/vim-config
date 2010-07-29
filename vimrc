@@ -53,3 +53,6 @@ nmap <C-p> gT
 " Disable the help key
 nmap <F1> <Esc>
 imap <F1> <Esc>
+
+" Print options
+:set printoptions=paper:letter

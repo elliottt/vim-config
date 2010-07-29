@@ -1,1 +1,1 @@
-au! BufNewFile,BufRead *.tex setlocal spell
+au! BufNewFile,BufRead *.tex setlocal spell filetype=tex

@@ -22,5 +22,7 @@ map pL O{-# LANGUAGE  #-}<Esc>hhhi
 map pI O{-# INLINE  #-}<Esc>hhhi
 
 " Set the tab size
-set tabstop=2
+set tabstop=8
 set shiftwidth=2
+
+set spell
