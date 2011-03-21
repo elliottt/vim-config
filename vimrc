@@ -55,4 +55,4 @@ nmap <F1> <Esc>
 imap <F1> <Esc>
 
 " Print options
-:set printoptions=paper:letter
+set printoptions=paper:letter

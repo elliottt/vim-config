@@ -16,13 +16,13 @@ map --l ^80i-<Esc>^llR<Space>
 map --\| O--<Space>\|<Space>
 
 " Insert a language pragma
-map pL O{-# LANGUAGE  #-}<Esc>hhhi
+map <Leader>l O{-# LANGUAGE  #-}<Esc>hhhi
 
 " Insert an inline pragma
-map pI O{-# INLINE  #-}<Esc>hhhi
+map <Leader>i O{-# INLINE  #-}<Esc>hhhi
 
 " Set the tab size
-set tabstop=8
-set shiftwidth=2
+setlocal tabstop=8
+setlocal shiftwidth=2
 
-set spell
+setlocal spell
