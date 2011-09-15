@@ -12,6 +12,9 @@ set backspace=indent,eol,start
 " Incremental searching
 set incsearch
 
+" Allow \ \ to kill the search highlighting.
+map <Leader><Leader> :noh<Enter>
+
 " Always show cursor position
 set ruler
 
