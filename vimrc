@@ -60,4 +60,4 @@ imap <F1> <Esc>
 " Print options
 set printoptions=paper:letter
 
-set wildignore=*.o,*.hi,*.swp
+set wildignore=*.o,*.hi,*.swp,*.bc
