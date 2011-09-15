@@ -4,20 +4,6 @@ endif
 
 let b:did_indent = 1
 
-if !exists('g:haskell_indent_if')
-    " if bool
-    " >>>then ...
-    " >>>else ...
-    let g:haskell_indent_if = 3
-endif
-
-if !exists('g:haskell_indent_case')
-    " case xs of
-    " >>[] -> ...
-    " >>(y:ys) -> ...
-    let g:haskell_indent_case = 2
-endif
-
 setlocal indentexpr=GetHaskellIndent()
 setlocal indentkeys=!^F,o,O
 
@@ -56,7 +42,7 @@ function! GetHaskellIndent()
 
         let s = match(line, '\<if\>')
         if s > 0
-            return s + g:haskell_indent_if
+            return &shiftwidth
         endif
     endif
 
@@ -67,7 +53,7 @@ function! GetHaskellIndent()
 
     let s = match(line, '\<case\>')
     if s > 0
-        return s + g:haskell_indent_case
+        return &shiftwidth
     endif
 
     return match(line, '\S')
