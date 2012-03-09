@@ -14,6 +14,8 @@ Bundle 'elliottt/vim-extras'
 
 " External packages
 Bundle 'tpope/vim-markdown'
+Bundle 'IndentAnything'
+Bundle 'Javascript-Indentation'
 
 " Enable filetype detection
 filetype plugin indent on
