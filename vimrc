@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'elliottt/vim-extras'
 
 " External packages
-Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-markdown'
 
 " Enable filetype detection
 filetype plugin indent on
