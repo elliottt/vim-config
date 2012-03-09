@@ -30,10 +30,7 @@ map <Leader><Leader> :noh<Enter>
 set ruler
 
 " Fold by manually defined folds
-if version >= 600
-    set foldenable
-    set foldmethod=marker
-endif
+set foldenable
 
 " Syntax
 if &t_Co > 2 || has("gui_running")
