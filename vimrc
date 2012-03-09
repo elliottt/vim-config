@@ -1,8 +1,16 @@
 set nocompatible
 
-" Colors!
-colors default
-set bg=dark
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'elliottt/vim-extra'
+
+" Enable filetype detection
+filetype plugin indent on
 
 set ignorecase smartcase
 
@@ -36,9 +44,6 @@ if has("spell")
     set nospell
 endif
 
-" Enable filetype detection
-filetype plugin indent on
-
 " Highlight undefined, trace and error
 let hs_highlight_debug = "true"
 
@@ -61,3 +66,7 @@ imap <F1> <Esc>
 set printoptions=paper:letter
 
 set wildignore=*.o,*.hi,*.swp,*.bc
+
+" Colors!
+colors default
+set bg=dark
