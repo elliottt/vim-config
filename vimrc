@@ -9,9 +9,6 @@ call vundle#rc()
 " Vundle
 Bundle 'gmarik/vundle'
 
-" Additional vim config
-Bundle 'elliottt/vim-extras'
-
 " External packages
 Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
