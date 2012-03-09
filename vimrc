@@ -1,13 +1,16 @@
 set nocompatible
 
+" Setup bundles
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'elliottt/vim-extra'
+" Additional vim config
+Bundle 'elliottt/vim-extras'
 
 " Enable filetype detection
 filetype plugin indent on
