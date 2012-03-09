@@ -47,9 +47,6 @@ if has("spell")
     set nospell
 endif
 
-" Highlight undefined, trace and error
-let hs_highlight_debug = "true"
-
 " Highlight lines longer than 80 chars
 let w:m80=matchadd('ErrorMsg', '\%>80v.\+', -1)
 set textwidth=80
