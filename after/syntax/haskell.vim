@@ -24,5 +24,3 @@ map <Leader>i O{-# INLINE  #-}<Esc>hhhi
 " Set the tab size
 setlocal tabstop=8
 setlocal shiftwidth=2
-
-setlocal spell
