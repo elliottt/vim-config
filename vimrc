@@ -12,7 +12,9 @@ Bundle 'gmarik/vundle'
 " External packages
 Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
-Bundle 'Javascript-Indentation'
+"Bundle 'Javascript-Indentation'
+Bundle 'OOP-javascript-indentation'
+"Bundle 'javascript.vim'
 
 " Enable filetype detection
 filetype plugin indent on
