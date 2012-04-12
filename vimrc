@@ -69,3 +69,9 @@ set wildignore=*.o,*.hi,*.swp,*.bc
 " Colors!
 colors default
 set bg=dark
+
+" Disable the arrow keys when in edit mode
+inoremap <Up>    <NOP>
+inoremap <Right> <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
