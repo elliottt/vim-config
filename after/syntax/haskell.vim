@@ -2,7 +2,7 @@ setlocal autoindent
 setlocal nocindent
 setlocal expandtab
 
-setlocal include=^\s*\(import\s+qualified\|import\)
+setlocal include="^\s*import\s+\(qualified\s+\)\zs\S+\ze"
 setlocal includeexpr=substitute(substitute(v:fname,'\\.','/','g'),'$','.hs','')
 
 highlight hsComment term=NONE ctermfg=cyan
