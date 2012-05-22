@@ -78,3 +78,6 @@ inoremap <Up>    <NOP>
 inoremap <Right> <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
+
+" Set F2 as the binding to toggle the paste mode
+set pastetoggle=<F2>
