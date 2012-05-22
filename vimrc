@@ -64,6 +64,9 @@ imap <F1> <Esc>
 " Print options
 set printoptions=paper:letter
 
+" Completion options
+set wildmode=full
+set wildmenu
 set wildignore=*.o,*.hi,*.swp,*.bc
 
 " Colors!
