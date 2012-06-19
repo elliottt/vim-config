@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
+Bundle 'aaronbieber/quicktask'
 
 " Enable filetype detection
 filetype plugin indent on
