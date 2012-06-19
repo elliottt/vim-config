@@ -6,3 +6,5 @@ else
 	cd bundle/vundle
 	git pull
 fi
+
+vim +BundleInstall +qa
