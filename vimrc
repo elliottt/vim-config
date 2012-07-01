@@ -14,6 +14,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 Bundle 'aaronbieber/quicktask'
+Bundle 'Lokaltog/vim-powerline'
 
 " Enable filetype detection
 filetype plugin indent on
@@ -82,3 +83,6 @@ inoremap <Left>  <NOP>
 
 " Set F2 as the binding to toggle the paste mode
 set pastetoggle=<F2>
+
+" Powerline config
+set laststatus=2
