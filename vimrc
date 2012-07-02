@@ -86,3 +86,4 @@ set pastetoggle=<F2>
 
 " Powerline config
 set laststatus=2
+let g:Powerline_symbols = 'fancy'
