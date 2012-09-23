@@ -16,6 +16,9 @@ Bundle 'OOP-javascript-indentation'
 Bundle 'aaronbieber/quicktask'
 Bundle 'Lokaltog/vim-powerline'
 
+Bundle 'tpope/vim-fugitive'
+Bundle 'jcf/vim-latex'
+
 " Enable filetype detection
 filetype plugin indent on
 
