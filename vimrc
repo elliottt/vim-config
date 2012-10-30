@@ -1,10 +1,17 @@
 set nocompatible
 
+" Compensate for windows
+if has('win32') || has('win64')
+let $VIMHOME='$HOME/vimfiles'
+else
+let $VIMHOME='$HOME/.vim'
+endif
+
 " Setup bundles
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=$VIMHOME/bundle/vundle/
+call vundle#rc('$VIMHOME/bundle')
 
 " Vundle
 Bundle 'gmarik/vundle'
@@ -18,6 +25,8 @@ Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ciaranm/inkpot'
 
 " Enable filetype detection
 filetype plugin indent on
@@ -87,6 +96,14 @@ inoremap <Left>  <NOP>
 " Set F2 as the binding to toggle the paste mode
 set pastetoggle=<F2>
 
+" Disable the bell
+set noeb vb t_vb=
+
 " Powerline config
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+
+if has('win32') || has('win64')
+    let g:Powerline_symbols = 'compatible'
+else
+    let g:Powerline_symbols = 'fancy'
+endif
