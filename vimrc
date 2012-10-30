@@ -2,16 +2,16 @@ set nocompatible
 
 " Compensate for windows
 if has('win32') || has('win64')
-let $VIMHOME='$HOME/vimfiles'
+let $VIMHOME=$HOME. '/vimfiles'
 else
-let $VIMHOME='$HOME/.vim'
+let $VIMHOME=$HOME . '/.vim'
 endif
 
 " Setup bundles
 filetype off
 
 set rtp+=$VIMHOME/bundle/vundle/
-call vundle#rc('$VIMHOME/bundle')
+call vundle#rc($VIMHOME . '/bundle')
 
 " Vundle
 Bundle 'gmarik/vundle'
