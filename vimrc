@@ -21,7 +21,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 Bundle 'aaronbieber/quicktask'
-Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
@@ -100,8 +99,8 @@ set pastetoggle=<F2>
 set noeb vb t_vb=
 
 " Powerline config
+Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-
 if has('win32') || has('win64')
     let g:Powerline_symbols = 'compatible'
 else
