@@ -27,6 +27,20 @@ Bundle 'jcf/vim-latex'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ciaranm/inkpot'
 
+" Powerline config
+Bundle 'Lokaltog/vim-powerline'
+set laststatus=2
+if has('win32') || has('win64')
+    let g:Powerline_symbols = 'compatible'
+else
+    let g:Powerline_symbols = 'fancy'
+endif
+
+" Haskell indent config
+Bundle 'indenthaskell.vim'
+let g:haskell_indent_if   = 3
+let g:haskell_indent_case = 2
+
 " Enable filetype detection
 filetype plugin indent on
 
@@ -97,17 +111,3 @@ set pastetoggle=<F2>
 
 " Disable the bell
 set noeb vb t_vb=
-
-" Powerline config
-Bundle 'Lokaltog/vim-powerline'
-set laststatus=2
-if has('win32') || has('win64')
-    let g:Powerline_symbols = 'compatible'
-else
-    let g:Powerline_symbols = 'fancy'
-endif
-
-" Haskell indent config
-Bundle 'indenthaskell.vim'
-let g:haskell_indent_if   = 3
-let g:haskell_indent_case = 2
