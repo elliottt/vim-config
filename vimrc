@@ -107,3 +107,8 @@ if has('win32') || has('win64')
 else
     let g:Powerline_symbols = 'fancy'
 endif
+
+" Haskell indent config
+Bundle 'indenthaskell.vim'
+let g:haskell_indent_if   = 3
+let g:haskell_indent_case = 2
