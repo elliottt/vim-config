@@ -36,10 +36,8 @@ else
     let g:Powerline_symbols = 'fancy'
 endif
 
-" Haskell indent config
-Bundle 'indenthaskell.vim'
-let g:haskell_indent_if   = 3
-let g:haskell_indent_case = 2
+" Haskell mode
+Bundle 'dag/vim2hs'
 
 " Enable filetype detection
 filetype plugin indent on
