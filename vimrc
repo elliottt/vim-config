@@ -36,9 +36,6 @@ else
     let g:Powerline_symbols = 'fancy'
 endif
 
-" Haskell mode
-Bundle 'dag/vim2hs'
-
 " Enable filetype detection
 filetype plugin indent on
 
