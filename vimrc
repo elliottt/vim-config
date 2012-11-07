@@ -113,3 +113,6 @@ set pastetoggle=<F2>
 
 " Disable the bell
 set noeb vb t_vb=
+
+" Map <Leader>s to sort the visual selection
+vmap <Leader>s :sort<Cr>
