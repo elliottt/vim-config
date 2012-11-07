@@ -54,7 +54,7 @@ function! GetHaskellIndent(lnum)
         let l:indent = match(l:line, '\<if\>') + 3
 
     elseif l:line =~# '\<\%(do\|let\|where\|in\|then\|else\)$'
-        let l:indent = indent(a:lnum - 1) + &shiftwidth
+        let l:indent = indent(a:lnum - 1)
 
     elseif l:line =~# '\<do\>'
         let l:indent = match(l:line, '\<do\>') + 3
