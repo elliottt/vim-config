@@ -1,10 +1,12 @@
 set nocompatible
 
-" Compensate for windows
+" OS Detection
 if has('win32') || has('win64')
-let $VIMHOME=$HOME. '/vimfiles'
+let $OS = 'windows'
+let $VIMHOME = $HOME. '/vimfiles'
 else
-let $VIMHOME=$HOME . '/.vim'
+let $OS = 'linux'
+let $VIMHOME = $HOME . '/.vim'
 endif
 
 " Setup bundles
@@ -24,13 +26,18 @@ Bundle 'aaronbieber/quicktask'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
-Bundle 'scrooloose/nerdtree'
 Bundle 'ciaranm/inkpot'
+
+"NERDTree config
+Bundle 'scrooloose/nerdtree'
+if $OS != 'windows'
+    let NERDTreeQuitOnOpen = 1
+endif
 
 " Powerline config
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-if has('win32') || has('win64')
+if $OS == 'windows'
     let g:Powerline_symbols = 'compatible'
 else
     let g:Powerline_symbols = 'fancy'
