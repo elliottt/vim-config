@@ -14,7 +14,7 @@ function! GetHaskellIndent(lnum)
     let l:line = getline(a:lnum - 1)
 
     if l:line =~# '^\s*$'
-        return 0
+        return match(l:line, '\S')
     endif
 
 
