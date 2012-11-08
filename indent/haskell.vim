@@ -42,7 +42,7 @@ function! GetHaskellIndent(lnum)
         let l:indent = match(l:line, '(')
 
     elseif l:line =~# '\<case\>.*\<of$'
-        let l:indent = match(l:line, '\<case\>') + &shiftwidth
+        let l:indent = &shiftwidth
 
     elseif l:line =~# '\<case\>.*\<of\>'
         let l:indent = match(l:line, '\<of\>') + 3
