@@ -18,8 +18,8 @@ map --\| O--<Space>\|<Space>
 " Insert a language pragma
 map <Leader>l O{-# LANGUAGE  #-}<Esc>hhhi
 
-" Insert an inline pragma
-map <Leader>i O{-# INLINE  #-}<Esc>hhhi
+" Insert an import declaration
+map <Leader>i Oimport 
 
 " Set the tab size
 setlocal tabstop=8
