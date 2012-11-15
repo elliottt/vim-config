@@ -21,7 +21,7 @@ function! GetHaskellIndent(lnum)
     let l:indent = indent(a:lnum - 1)
 
     if l:line =~# '^data\>.*=.\+'
-        let l:indent = match(l:line, '=')
+        let l:indent = &shiftwidth
 
     elseif l:line =~# '^data\>[^=]\+\|^class\>\|^instance\>'
         let l:indent = &shiftwidth
