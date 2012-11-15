@@ -10,3 +10,7 @@ endif
 
 " Insert a separating line
 map --l ^i/* <Esc>76a*<Esc>A/<Esc>F lR
+
+" Insert a system include
+map <Leader>i O#include <><Esc>i
+map <Leader>I O#include ""<Esc>i
