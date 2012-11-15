@@ -94,7 +94,7 @@ imap <F1> <Esc>
 set printoptions=paper:letter
 
 " Completion options
-set wildmode=full
+set wildmode=longest:full,list:full
 set wildmenu
 set wildignore=*.o,*.hi,*.swp,*.bc
 
