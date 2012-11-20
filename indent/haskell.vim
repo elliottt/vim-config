@@ -30,7 +30,7 @@ function! GetHaskellIndent(lnum)
         let l:indent = &shiftwidth
 
     elseif l:line =~# '^\k\+.*=\s*\%(do\)\?$'
-        let l:indent = &shiftwidth
+        let l:indent = match(l:line, '\S') + &shiftwidth
 
     elseif l:line =~# '\[[^\]]*$'
         let l:indent = match(l:line, '\[')
@@ -38,20 +38,23 @@ function! GetHaskellIndent(lnum)
     elseif l:line =~# '{[^}]*$'
         let l:indent = match(l:line, '{')
 
+    elseif l:line =~# 'module.*($'
+        let l:indent = match(l:line, '\S') + &shiftwidth
+
     elseif l:line =~# '([^)]*$'
         let l:indent = match(l:line, '(')
 
-    elseif l:line =~# '\<case\>.*\<of$'
-        let l:indent = &shiftwidth
-
     elseif l:line =~# '\<case\>.*\<of\>'
-        let l:indent = match(l:line, '\<of\>') + 3
+        let l:indent = match(l:line, '\S') + &shiftwidth
 
     elseif l:line =~# '\<if\>.*\<then\>.*\%(\<else\>\)\@!'
         let l:indent = match(l:line, '\<then\>')
 
     elseif l:line =~# '\<if\>'
         let l:indent = match(l:line, '\<if\>') + 3
+
+    elseif l:line =~# '\<do$'
+        let l:indent = match(l:line, '\S') + &shiftwidth
 
     elseif l:line =~# '\<\%(do\|let\|where\|in\|then\|else\)$'
         let l:indent = indent(a:lnum - 1)
