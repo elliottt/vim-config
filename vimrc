@@ -57,6 +57,12 @@ set incsearch
 " Extended matching with %
 runtime macros/matchit.vim
 
+" Set the terminal title
+set title
+
+" Cursor context
+set scrolloff=3
+
 " Allow \ \ to kill the search highlighting.
 map <Leader><Leader> :noh<Enter>
 
@@ -82,8 +88,10 @@ endif
 let w:m80=matchadd('ErrorMsg', '\%>80v.\+', -1)
 set textwidth=80
 
-" Highlight trailing space, and tab characters
+" Highlight trailing space, and tab characters, toggle with <leader>-s
 set list lcs=tab:>-,trail:.
+nmap <leader>s :set nolist!<CR>
+
 
 " Tab navigation
 nmap <C-n> gt
