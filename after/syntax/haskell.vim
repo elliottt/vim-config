@@ -7,19 +7,19 @@ setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.hs'
 
 highlight hsComment term=NONE ctermfg=cyan
 
-map K <Nop>
+nmap <buffer> K <Nop>
 
 " Insert a separating line
-map --l ^80i-<Esc>^llR<Space>
+nmap <buffer> --l ^80i-<Esc>^llR<Space>
 
 " Insert a Haddock comment
-map --\| O--<Space>\|<Space>
+nmap <buffer> --\| O--<Space>\|<Space>
 
 " Insert a language pragma
-map <Leader>l O{-# LANGUAGE  #-}<Esc>hhhi
+nmap <buffer> <localleader>l O{-# LANGUAGE  #-}<Esc>hhhi
 
 " Insert an import declaration
-map <Leader>i Oimport 
+nmap <buffer> <localleader>i Oimport 
 
 " Set the tab size
 setlocal tabstop=8
