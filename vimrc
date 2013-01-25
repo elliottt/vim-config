@@ -54,6 +54,9 @@ set backspace=indent,eol,start
 " Incremental searching
 set incsearch
 
+" Extended matching with %
+runtime macros/matchit.vim
+
 " Allow \ \ to kill the search highlighting.
 map <Leader><Leader> :noh<Enter>
 
