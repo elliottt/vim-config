@@ -1,5 +1,9 @@
 set nocompatible
 
+" Set the leader as ';' instead of '\\'
+let mapleader      = ";"
+let maplocalleader = ";"
+
 " OS Detection
 if has('win32') || has('win64')
 let $OS = 'windows'
