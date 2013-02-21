@@ -32,7 +32,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
 Bundle 'ciaranm/inkpot'
 
-"NERDTree config
+" Haskell Indenting
+Bundle 'elliottt/haskell-indent'
+
+" NERDTree config
 Bundle 'scrooloose/nerdtree'
 if $OS != 'windows'
     let NERDTreeQuitOnOpen = 1
