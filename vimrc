@@ -71,7 +71,7 @@ set title
 set scrolloff=3
 
 " Allow \ \ to kill the search highlighting.
-map <Leader><Leader> :noh<Enter>
+nnoremap <Leader><Leader> :noh<Enter>
 
 " Always show cursor position
 set ruler
@@ -97,16 +97,16 @@ set textwidth=80
 
 " Highlight trailing space, and tab characters, toggle with <leader>-s
 set list lcs=tab:>-,trail:.
-nmap <leader>s :set nolist!<CR>
+nnoremap <leader>s :set nolist!<CR>
 
 
 " Tab navigation
-nmap <C-n> gt
-nmap <C-p> gT
+nnoremap <C-n> gt
+nnoremap <C-p> gT
 
 " Disable the help key
-nmap <F1> <Esc>
-imap <F1> <Esc>
+nnoremap <F1> <Esc>
+inoremap <F1> <Esc>
 
 " Print options
 set printoptions=paper:letter
@@ -126,13 +126,13 @@ inoremap <Right> <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 
-imap jj <Esc>
+inoremap jj <Esc>
 
 " Set F2 as the binding to toggle the paste mode
 set pastetoggle=<F2>
 
 " Use F3 to toggle spelling
-nmap <F3> :set spell!<CR>
+nnoremap <F3> :set spell!<CR>
 
 " Disable the bell
 set noerrorbells
@@ -140,4 +140,4 @@ set visualbell
 set t_vb=
 
 " Map <Leader>s to sort the visual selection
-vmap <Leader>s :sort<Cr>
+vnoremap <Leader>s :sort<Cr>
