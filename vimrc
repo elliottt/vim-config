@@ -1,7 +1,6 @@
 set nocompatible
 
-" Set the leader as ';' instead of '\\'
-let mapleader      = ";"
+let mapleader      = ","
 let maplocalleader = ";"
 
 " OS Detection
