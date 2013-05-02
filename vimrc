@@ -49,6 +49,10 @@ else
     let g:Powerline_symbols = 'fancy'
 endif
 
+" Coq interaction
+Bundle 'def-lkb/vimbufsync'
+Bundle 'trefis/coquille'
+
 " Enable filetype detection
 filetype plugin indent on
 
