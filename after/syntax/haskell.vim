@@ -10,13 +10,14 @@ highlight hsComment term=NONE ctermfg=cyan
 nnoremap <buffer> K <Nop>
 
 " Insert a separating line
-nnoremap <buffer> --l ^80i-<Esc>^llR<Space>
+nnoremap <buffer> <LocalLeader>l ^80i-<Esc>^llR<Space>
 
 " Insert a Haddock comment
 nnoremap <buffer> --\| O--<Space>\|<Space>
 
-" Insert a language pragma
-nnoremap <buffer> <localleader>l O{-# LANGUAGE  #-}<Esc>hhhi
+" Pragmas
+nnoremap <buffer> <localleader>#l O{-# LANGUAGE  #-}<Esc>hhhi
+nnoremap <buffer> <localleader>#i O{-# INLINE #-}<Esc>hhhi
 
 " Insert an import declaration
 nnoremap <buffer> <localleader>i Oimport 
