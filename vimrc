@@ -97,6 +97,8 @@ endif
 
 " Highlight lines longer than 80 chars
 let w:m80=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
+" Wrap the line at 80 characters
 set textwidth=80
 
 " Highlight trailing space, and tab characters, toggle with <leader>-s
