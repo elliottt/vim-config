@@ -81,6 +81,7 @@ set ruler
 
 " Fold by manually defined folds
 set foldenable
+set foldmethod=marker
 
 " Syntax
 if &t_Co > 2 || has("gui_running")
