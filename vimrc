@@ -145,3 +145,6 @@ set t_vb=
 
 " Map <Leader>s to sort the visual selection
 vnoremap <Leader>s :sort<Cr>
+
+nnoremap <Leader>u vawgU
+nnoremap <Leader>l vawgu
