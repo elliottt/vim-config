@@ -2,5 +2,5 @@ setlocal nospell
 
 " folding
 setlocal nofoldenable
-setlocal foldmethod=indent
+setlocal foldmethod=marker
 setlocal foldlevel=1

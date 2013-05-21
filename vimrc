@@ -25,7 +25,11 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
+
+" Quick Task
 Bundle 'aaronbieber/quicktask'
+let g:quicktask_snip_path = $VIMHOME . '/snips/'
+let g:quicktask_snip_default_filetype = 'markdown'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
