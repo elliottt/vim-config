@@ -49,11 +49,12 @@ Bundle 'itchyny/lightline.vim'
 set laststatus=2
 let g:lightline = {
       \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
+      \   'readonly': '%{&readonly?"⭤":""}'
+      \ } }
+if $OS != 'windows'
+    let g:lightline['separator']    =  { 'left': '⮀', 'right': '⮂' }
+    let g:lightline['subseparator'] =  { 'left': '⮁', 'right': '⮃' }
+endif
 
 " Coq interaction
 Bundle 'def-lkb/vimbufsync'
