@@ -44,14 +44,16 @@ if $OS != 'windows'
     let NERDTreeQuitOnOpen = 1
 endif
 
-" Powerline config
-Bundle 'Lokaltog/vim-powerline'
+" lightline.vim config
+Bundle 'itchyny/lightline.vim'
 set laststatus=2
-if $OS == 'windows'
-    let g:Powerline_symbols = 'compatible'
-else
-    let g:Powerline_symbols = 'fancy'
-endif
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 
 " Coq interaction
 Bundle 'def-lkb/vimbufsync'
