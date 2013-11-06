@@ -34,6 +34,7 @@ let g:quicktask_snip_default_filetype = 'markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
 Bundle 'ciaranm/inkpot'
+Bundle 'junegunn/seoul256.vim'
 
 " Haskell Indenting
 Bundle 'elliottt/haskell-indent'
@@ -130,8 +131,9 @@ set wildmenu
 set wildignore=*.o,*.hi,*.swp,*.bc
 
 " Colors!
-colors default
+colors seoul256
 set bg=dark
+highlight Normal cterm=NONE ctermbg=NONE
 
 " Disable the arrow keys when in edit mode
 inoremap <Up>    <NOP>
