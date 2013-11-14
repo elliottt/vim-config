@@ -33,7 +33,6 @@ let g:quicktask_snip_default_filetype = 'markdown'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
-Bundle 'ciaranm/inkpot'
 Bundle 'junegunn/seoul256.vim'
 
 " Haskell Indenting
@@ -60,6 +59,9 @@ endif
 " Coq interaction
 Bundle 'def-lkb/vimbufsync'
 Bundle 'trefis/coquille'
+
+" TMux interaction
+Bundle 'benmills/vimux'
 
 " Enable filetype detection
 filetype plugin indent on
@@ -150,9 +152,7 @@ set pastetoggle=<F2>
 nnoremap <F3> :set spell!<CR>
 
 " Disable the bell
-set noerrorbells
-set visualbell
-set t_vb=
+set noeb t_vb=
 
 " Map <Leader>s to sort the visual selection
 vnoremap <Leader>s :sort<Cr>

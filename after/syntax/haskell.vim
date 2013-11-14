@@ -25,3 +25,13 @@ nnoremap <buffer> <localleader>i Oimport
 " Set the tab size
 setlocal tabstop=8
 setlocal shiftwidth=2
+
+" Open the current module in ghci
+nnoremap <buffer> <LocalLeader>g :call VimuxRunCommand("ghci " . bufname("%"))<Cr>
+
+" Reload the current module
+nnoremap <buffer> <LocalLeader>r :call VimuxSendText(":r\n")<Cr>
+
+" Type-checking commands
+nnoremap <buffer> <LocalLeader>ty vaw"vy :call VimuxSendText(":t " . @v . "\n")<Cr>
+vnoremap <buffer> <LocalLeader>ty    "vy :call VimuxSendText(":t " . @v . "\n")<Cr>
