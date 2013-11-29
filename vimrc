@@ -44,17 +44,22 @@ if $OS != 'windows'
     let NERDTreeQuitOnOpen = 1
 endif
 
-" lightline.vim config
-Bundle 'itchyny/lightline.vim'
+" Airline
+Bundle "bling/vim-airline"
 set laststatus=2
-let g:lightline = {
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}'
-      \ } }
 if $OS != 'windows'
-    let g:lightline['separator']    =  { 'left': '⮀', 'right': '⮂' }
-    let g:lightline['subseparator'] =  { 'left': '⮁', 'right': '⮃' }
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+
+    " no fancy symbols on windows
+    let g:airline_powerline_fonts = 1
+
+    " Airline output for tmux
+    Bundle 'edkolev/tmuxline.vim'
 endif
+
+let g:airline_theme = 'bubblegum'
 
 " Coq interaction
 Bundle 'def-lkb/vimbufsync'
