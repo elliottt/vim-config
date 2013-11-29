@@ -65,6 +65,8 @@ let g:airline_theme = 'bubblegum'
 Bundle 'def-lkb/vimbufsync'
 Bundle 'trefis/coquille'
 
+" Text alignment
+Bundle "tommcdo/vim-lion"
 
 " Enable filetype detection
 filetype plugin indent on
