@@ -60,8 +60,6 @@ endif
 Bundle 'def-lkb/vimbufsync'
 Bundle 'trefis/coquille'
 
-" TMux interaction
-Bundle 'benmills/vimux'
 
 " Enable filetype detection
 filetype plugin indent on
