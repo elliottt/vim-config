@@ -57,6 +57,9 @@ if $OS != 'windows'
     let g:airline#extensions#tabline#show_buffers  = 0
     let g:airline#extensions#tabline#tab_min_count = 2
 
+    " empty git branch value
+    let g:airline#extensions#branch#empty_message = ' '
+
     " no fancy symbols on windows
     let g:airline_powerline_fonts = 1
 
