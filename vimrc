@@ -53,9 +53,7 @@ if $OS != 'windows'
     endif
 
     " tabline config
-    let g:airline#extensions#tabline#enabled       = 1
-    let g:airline#extensions#tabline#show_buffers  = 0
-    let g:airline#extensions#tabline#tab_min_count = 2
+    let g:airline#extensions#tabline#enabled = 1
 
     " empty git branch value
     let g:airline#extensions#branch#empty_message = ' '
@@ -65,6 +63,7 @@ if $OS != 'windows'
 
     " Airline output for tmux
     Bundle 'edkolev/tmuxline.vim'
+    let g:tmuxline_preset = 'powerline'
 endif
 
 let g:airline_theme = 'bubblegum'
