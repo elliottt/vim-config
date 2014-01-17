@@ -26,6 +26,9 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 
+" CtrlP
+Bundle 'kien/ctrlp.vim'
+
 " Quick Task
 Bundle 'aaronbieber/quicktask'
 let g:quicktask_snip_path = $VIMHOME . '/snips/'
@@ -126,11 +129,6 @@ set textwidth=80
 " Highlight trailing space, and tab characters, toggle with <leader>-s
 set list lcs=tab:>-,trail:.
 nnoremap <leader>s :set nolist!<CR>
-
-
-" Tab navigation
-nnoremap <C-n> gt
-nnoremap <C-p> gT
 
 " Disable the help key
 nnoremap <F1> <Esc>
