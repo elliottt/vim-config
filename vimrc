@@ -26,8 +26,16 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 
+" Range-based syntax highlighting
+Bundle 'SyntaxRange'
+
 " CtrlP
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<Space>'
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("t")': [ '<c-g>' ]
+    \ }
+nnoremap <C-@> :CtrlPBuffer<CR>
 
 " Quick Task
 Bundle 'aaronbieber/quicktask'
@@ -40,12 +48,6 @@ Bundle 'junegunn/seoul256.vim'
 
 " Haskell Indenting
 Bundle 'elliottt/haskell-indent'
-
-" NERDTree config
-Bundle 'scrooloose/nerdtree'
-if $OS != 'windows'
-    let NERDTreeQuitOnOpen = 1
-endif
 
 " Airline
 Bundle "bling/vim-airline"
@@ -73,7 +75,7 @@ let g:airline_theme = 'bubblegum'
 
 " Coq interaction
 Bundle 'def-lkb/vimbufsync'
-Bundle 'trefis/coquille'
+Bundle 'the-lambda-church/coquille'
 
 " Text alignment
 Bundle "tommcdo/vim-lion"
@@ -103,6 +105,10 @@ nnoremap <Leader><Leader> :noh<Enter>
 
 " Always show cursor position
 set ruler
+
+" Tab navigation
+nnoremap <C-n> gt
+nnoremap <C-p> gT
 
 " Fold by manually defined folds
 set foldenable
