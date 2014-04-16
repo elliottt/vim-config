@@ -8,6 +8,7 @@ setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.hs'
 highlight hsComment term=NONE ctermfg=cyan
 
 nnoremap <buffer> K <Nop>
+vnoremap <buffer> K <Nop>
 
 " Insert a separating line
 nnoremap <buffer> <LocalLeader>l ^80i-<Esc>^llR<Space>
@@ -21,6 +22,9 @@ nnoremap <buffer> <localleader>#i O{-# INLINE #-}<Esc>hhhi
 
 " Insert an import declaration
 nnoremap <buffer> <localleader>i Oimport 
+
+" Run cabal build in a separate tmux pane
+nnoremap <buffer> <localleader>b :call VimuxRunCommand('cabal build')<Cr>
 
 " Set the tab size
 setlocal tabstop=8
