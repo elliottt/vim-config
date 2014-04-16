@@ -37,6 +37,12 @@ let g:ctrlp_prompt_mappings = {
     \ }
 nnoremap <C-@> :CtrlPBuffer<CR>
 
+" Silver searcher integration
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 " Quick Task
 Bundle 'aaronbieber/quicktask'
 let g:quicktask_snip_path = $VIMHOME . '/snips/'
@@ -80,6 +86,9 @@ Bundle 'the-lambda-church/coquille'
 " Text alignment
 Bundle "tommcdo/vim-lion"
 
+" Tmux integration
+Bundle "benmills/vimux"
+
 " Enable filetype detection
 filetype plugin indent on
 
@@ -106,9 +115,25 @@ nnoremap <Leader><Leader> :noh<Enter>
 " Always show cursor position
 set ruler
 
-" Tab navigation
-nnoremap <C-n> gt
-nnoremap <C-p> gT
+" Tab/buffer navigation
+function! Next()
+    if tabpagenr('$') > 1
+        tabnext
+    else
+        bnext
+    endif
+endfunction
+
+function! Prev()
+    if tabpagenr('$') > 1
+        tabprevious
+    else
+        bprevious
+    endif
+endfunction
+
+nnoremap <C-n> :call Next()<Cr>
+nnoremap <C-p> :call Prev()<Cr>
 
 " Fold by manually defined folds
 set foldenable
