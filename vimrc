@@ -26,9 +26,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 
-" Range-based syntax highlighting
-Bundle 'SyntaxRange'
-
 " CtrlP
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<Space>'
