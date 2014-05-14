@@ -38,6 +38,8 @@ nnoremap <C-@> :CtrlPBuffer<CR>
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+                             \ . ' --ignore "dist"'
+                             \ . ' --ignore "\.(o|hi)"'
 endif
 
 " Quick Task
@@ -168,7 +170,7 @@ set printoptions=paper:letter
 " Completion options
 set wildmode=longest:full,list:full
 set wildmenu
-set wildignore=*.o,*.hi,*.swp,*.bc
+set wildignore=*.o,*.hi,*.swp,*.bc,dist/*
 
 " Colors!
 colors seoul256
@@ -180,6 +182,9 @@ inoremap <Up>    <NOP>
 inoremap <Right> <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
+
+" Stop entering ex mode accidentally
+nnoremap Q <NOP>
 
 inoremap jk <Esc>
 
