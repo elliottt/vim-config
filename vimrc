@@ -79,9 +79,12 @@ endif
 
 " Unite for file/buffer searching
 Bundle 'Shougo/unite.vim'
-nnoremap <Space> :Unite -default-action=tabopen
-                      \ -start-insert
-                      \ file_rec buffer<Cr>
+let g:unite_split_rule = 'botright'
+let g:unite_winheight  = 10
+
+call unite#filters#sorter_default#use(['sorter_rank'])
+
+nnoremap <Space> :Unite -start-insert buffer file_rec <Cr>
 
 " Enable filetype detection
 filetype plugin indent on
