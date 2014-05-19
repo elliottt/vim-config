@@ -26,6 +26,22 @@ Bundle 'tpope/vim-markdown'
 Bundle 'IndentAnything'
 Bundle 'OOP-javascript-indentation'
 
+" CtrlP
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<Space>'
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("t")': [ '<c-g>' ]
+    \ }
+nnoremap <C-@> :CtrlPBuffer<CR>
+
+" Silver searcher integration
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+                             \ . ' --ignore "dist"'
+                             \ . ' --ignore "\.(o|hi)"'
+endif
+
 " Quick Task
 Bundle 'aaronbieber/quicktask'
 let g:quicktask_snip_path = $VIMHOME . '/snips/'
@@ -71,17 +87,6 @@ Bundle "tommcdo/vim-lion"
 
 " Tmux integration
 Bundle "benmills/vimux"
-
-" Silver searcher integration
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-endif
-
-" Unite for file/buffer searching
-Bundle 'Shougo/unite.vim'
-nnoremap <Space> :Unite -default-action=tabopen
-                      \ -start-insert
-                      \ file_rec buffer<Cr>
 
 " Enable filetype detection
 filetype plugin indent on
