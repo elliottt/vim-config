@@ -205,3 +205,6 @@ vnoremap <Leader>s :sort<Cr>
 " Case altering
 nnoremap <Leader>U vawgU
 nnoremap <Leader>u vawgu
+
+" Swap files in one place
+set directory=$VIMHOME/swap
