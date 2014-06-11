@@ -88,6 +88,8 @@ Bundle "tommcdo/vim-lion"
 " Tmux integration
 Bundle "benmills/vimux"
 
+Bundle 'tpope/vim-surround'
+
 " Enable filetype detection
 filetype plugin indent on
 
