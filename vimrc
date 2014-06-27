@@ -31,6 +31,7 @@ let g:ctrlp_map = '<Space>'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': [ '<c-g>' ]
     \ }
+let g:ctrlp_open_new_file = 'r'
 nnoremap <C-@> :CtrlPBuffer<CR>
 
 " Silver searcher integration
