@@ -22,9 +22,8 @@ call vundle#rc($VIMHOME . '/bundle')
 Bundle 'gmarik/vundle'
 
 " External packages
-Bundle 'tpope/vim-markdown'
-Bundle 'IndentAnything'
-Bundle 'OOP-javascript-indentation'
+" Bundle 'IndentAnything'
+" Bundle 'OOP-javascript-indentation'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
