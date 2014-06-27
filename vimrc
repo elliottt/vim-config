@@ -46,7 +46,6 @@ Bundle 'aaronbieber/quicktask'
 let g:quicktask_snip_path = $VIMHOME . '/snips/'
 let g:quicktask_snip_default_filetype = 'markdown'
 
-Bundle 'tpope/vim-fugitive'
 Bundle 'jcf/vim-latex'
 Bundle 'junegunn/seoul256.vim'
 
@@ -87,7 +86,11 @@ Bundle "tommcdo/vim-lion"
 " Tmux integration
 Bundle "benmills/vimux"
 
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-markdown'
 
 " Enable filetype detection
 filetype plugin indent on
