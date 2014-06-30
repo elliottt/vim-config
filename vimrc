@@ -114,7 +114,7 @@ set title
 set scrolloff=3
 
 " Allow \ \ to kill the search highlighting.
-nnoremap <Leader><Leader> :noh<Enter>
+nnoremap <silent> <Leader><Leader> :noh<Enter>
 
 " Always show cursor position
 set ruler
