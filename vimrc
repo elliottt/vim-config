@@ -37,9 +37,7 @@ nnoremap <C-@> :CtrlPBuffer<CR>
 " Silver searcher integration
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-                             \ . ' --ignore "dist"'
-                             \ . ' --ignore "\.(o|hi)"'
+    let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
 
 " Quick Task
