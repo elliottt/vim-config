@@ -21,10 +21,6 @@ call vundle#rc($VIMHOME . '/bundle')
 " Vundle
 Bundle 'gmarik/vundle'
 
-" External packages
-" Bundle 'IndentAnything'
-" Bundle 'OOP-javascript-indentation'
-
 " CtrlP
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<Space>'
@@ -39,11 +35,6 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
-
-" Quick Task
-Bundle 'aaronbieber/quicktask'
-let g:quicktask_snip_path = $VIMHOME . '/snips/'
-let g:quicktask_snip_default_filetype = 'markdown'
 
 Bundle 'jcf/vim-latex'
 Bundle 'junegunn/seoul256.vim'
