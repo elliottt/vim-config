@@ -200,3 +200,7 @@ nnoremap <Leader>u vawgu
 
 " Swap files in one place
 set directory=$VIMHOME/swap
+
+" Enable hidden buffers (so that switching between dirty buffers doesn't throw
+" an error)
+set hidden
