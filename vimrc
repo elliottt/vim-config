@@ -12,17 +12,17 @@ let $OS = 'linux'
 let $VIMHOME = $HOME . '/.vim'
 endif
 
-" Setup bundles
+" Setup plugins
 filetype off
 
-set rtp+=$VIMHOME/bundle/vundle/
-call vundle#rc($VIMHOME . '/bundle')
+set rtp+=$VIMHOME/bundle/vundle
+call vundle#begin()
 
 " Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " CtrlP
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<Space>'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': [ '<c-g>' ]
@@ -36,14 +36,14 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
 
-Bundle 'jcf/vim-latex'
-Bundle 'junegunn/seoul256.vim'
+Plugin 'jcf/vim-latex'
+Plugin 'junegunn/seoul256.vim'
 
 " Haskell Indenting
-Bundle 'elliottt/haskell-indent'
+Plugin 'elliottt/haskell-indent'
 
 " Airline
-Bundle "bling/vim-airline"
+Plugin 'bling/vim-airline'
 set laststatus=2
 if $OS != 'windows'
     if !exists('g:airline_symbols')
@@ -60,27 +60,29 @@ if $OS != 'windows'
     let g:airline_powerline_fonts = 1
 
     " Airline output for tmux
-    Bundle 'edkolev/tmuxline.vim'
+    Plugin 'edkolev/tmuxline.vim'
     let g:tmuxline_preset = 'powerline'
 endif
 
 let g:airline_theme = 'bubblegum'
 
 " Coq interaction
-Bundle 'def-lkb/vimbufsync'
-Bundle 'the-lambda-church/coquille'
+Plugin 'def-lkb/vimbufsync'
+Plugin 'the-lambda-church/coquille'
 
 " Text alignment
-Bundle "tommcdo/vim-lion"
+Plugin 'tommcdo/vim-lion'
 
 " Tmux integration
-Bundle "benmills/vimux"
+Plugin 'benmills/vimux'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-markdown'
+
+call vundle#end()
 
 " Enable filetype detection
 filetype plugin indent on
