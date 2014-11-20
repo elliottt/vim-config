@@ -83,6 +83,12 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-abolish'
 
+if executable('ghc-mod')
+    Plugin 'Shougo/vimproc'
+    Plugin 'eagletmt/ghcmod-vim'
+    Plugin 'eagletmt/neco-ghc'
+endif
+
 call vundle#end()
 
 " Enable filetype detection
