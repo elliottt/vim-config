@@ -179,7 +179,6 @@ set wildignore=*.o,*.hi,*.swp,*.bc,dist/*
 " Colors!
 colors seoul256
 set bg=dark
-highlight Normal cterm=NONE ctermbg=NONE
 
 " Disable the arrow keys when in edit mode
 inoremap <Up>    <NOP>
