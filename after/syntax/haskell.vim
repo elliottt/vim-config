@@ -26,6 +26,9 @@ nnoremap <buffer> <localleader>i Oimport
 " Run cabal build in a separate tmux pane
 nnoremap <buffer> <silent> <localleader>b :call VimuxRunCommand('cabal build')<Cr>
 
+" Reloade in ghci in a separate tmux pane
+nnoremap <buffer> <silent> <localleader>r :call VimuxRunCommand(':r')<Cr>
+
 " Set the tab size
 setlocal tabstop=8
 setlocal shiftwidth=2
