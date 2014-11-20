@@ -15,7 +15,7 @@ endif
 " Setup plugins
 filetype off
 
-set rtp+=$VIMHOME/bundle/vundle
+set rtp+=$VIMHOME/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle

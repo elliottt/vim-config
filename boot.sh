@@ -4,11 +4,8 @@ if [[ ! -d swap ]]; then
 	mkdir swap
 fi
 
-if [[ ! -d bundle/vundle ]]; then
-	git clone https://github.com/gmarik/vundle.git bundle/vundle
-else
-	cd bundle/vundle
-	git pull
+if [[ ! -d bundle/Vundle.vim ]]; then
+	git clone https://github.com/gmarik/vundle.git bundle/Vundle.vim
 fi
 
 vim +BundleInstall +qa
