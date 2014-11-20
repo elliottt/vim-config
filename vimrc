@@ -36,7 +36,6 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
 
-Plugin 'jcf/vim-latex'
 Plugin 'junegunn/seoul256.vim'
 
 " Haskell Indenting
@@ -185,6 +184,12 @@ inoremap <Up>    <NOP>
 inoremap <Right> <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
+
+" Enable navication in insert mode with control modifiers
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-f> <PageDown>
+inoremap <C-b> <PageUp>
 
 " Stop entering ex mode accidentally
 nnoremap Q <NOP>
