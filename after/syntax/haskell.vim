@@ -18,7 +18,7 @@ nnoremap <buffer> --\| O--<Space>\|<Space>
 
 " Pragmas
 nnoremap <buffer> <localleader>#l O{-# LANGUAGE  #-}<Esc>hhhi
-nnoremap <buffer> <localleader>#i O{-# INLINE #-}<Esc>hhhi
+nnoremap <buffer> <localleader>#i O{-# INLINE  #-}<Esc>hhhi
 
 " Insert an import declaration
 nnoremap <buffer> <localleader>i Oimport 
