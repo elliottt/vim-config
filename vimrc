@@ -134,8 +134,9 @@ function! Prev()
     endif
 endfunction
 
-nnoremap <C-n> :call Next()<Cr>
-nnoremap <C-p> :call Prev()<Cr>
+nnoremap <silent> <C-n> :call Next()<Cr>
+nnoremap <silent> <C-p> :call Prev()<Cr>
+nnoremap <silent> <C-d> :lclose<Cr>:bdelete<Cr>
 
 " Fold by manually defined folds
 set foldenable
