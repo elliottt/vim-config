@@ -32,3 +32,6 @@ nnoremap <buffer> <silent> <localleader>r :call VimuxRunCommand(':r')<Cr>
 " Set the tab size
 setlocal tabstop=8
 setlocal shiftwidth=2
+
+" Setup ghc-mod based omni-completion
+setlocal omnifunc=necoghc#omnifunc
