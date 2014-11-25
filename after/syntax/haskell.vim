@@ -35,3 +35,6 @@ setlocal shiftwidth=2
 
 " Setup ghc-mod based omni-completion
 setlocal omnifunc=necoghc#omnifunc
+
+" Spellcheck comments
+setlocal spell
