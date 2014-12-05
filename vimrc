@@ -218,3 +218,6 @@ set directory=$VIMHOME/swap
 " Enable hidden buffers (so that switching between dirty buffers doesn't throw
 " an error)
 set hidden
+
+" Automatically restore the last position on reload
+autocmd BufReadPost * normal `"
