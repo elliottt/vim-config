@@ -129,9 +129,18 @@ function! Prev()
     endif
 endfunction
 
+function! Close()
+    if tabpagewinnr(tabpagenr(), '$') > 1
+        close
+    else
+        lclose
+        bdelete
+    endif
+endfunction
+
 nnoremap <silent> <C-n> :call Next()<Cr>
 nnoremap <silent> <C-p> :call Prev()<Cr>
-nnoremap <silent> <C-d> :lclose<Cr>:bdelete<Cr>
+nnoremap <silent> <C-d> :call Close()<Cr>
 
 " Fold by manually defined folds
 set foldenable
