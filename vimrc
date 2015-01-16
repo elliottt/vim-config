@@ -82,6 +82,8 @@ if executable('ghc-mod')
     Plugin 'eagletmt/neco-ghc'
 endif
 
+Plugin 'idris-hackers/idris-vim'
+
 call vundle#end()
 
 " Enable filetype detection
