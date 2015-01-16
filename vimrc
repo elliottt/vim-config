@@ -28,6 +28,8 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': [ '<c-g>' ]
     \ }
 let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_extensions = [ 'mixed', 'quickfix' ]
+let g:ctrlp_cmd = 'CtrlPMixed'
 nnoremap <C-@> :CtrlPBuffer<CR>
 
 " Silver searcher integration
