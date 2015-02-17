@@ -220,8 +220,11 @@ set noeb t_vb=
 vnoremap <Leader>s :sort<Cr>
 
 " Case altering
-nnoremap <Leader>U vawgU
-nnoremap <Leader>u vawgu
+nnoremap <Leader>U viwgU
+nnoremap <Leader>u viwgu
+
+" Grep for the word under the cursor
+nnoremap <Leader>f yiw:grep! <C-r>"<Cr>
 
 " Swap files in one place
 set directory=$VIMHOME/swap
