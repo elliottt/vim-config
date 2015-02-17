@@ -75,10 +75,12 @@ Plugin 'tommcdo/vim-lion'
 " Tmux integration
 Plugin 'benmills/vimux'
 
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-dispatch'
 
 if executable('ghc-mod')
     Plugin 'Shougo/vimproc'

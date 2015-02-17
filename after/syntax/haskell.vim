@@ -23,10 +23,7 @@ nnoremap <buffer> <localleader>#i O{-# INLINE  #-}<Esc>hhhi
 " Insert an import declaration
 nnoremap <buffer> <localleader>i Oimport 
 
-" Run cabal build in a separate tmux pane
-nnoremap <buffer> <silent> <localleader>b :call VimuxRunCommand('cabal build')<Cr>
-
-" Reloade in ghci in a separate tmux pane
+" Reload in ghci in a separate tmux pane
 nnoremap <buffer> <silent> <localleader>r :call VimuxRunCommand(':r')<Cr>
 
 " Set the tab size
@@ -38,3 +35,16 @@ setlocal omnifunc=necoghc#omnifunc
 
 " Spellcheck comments
 setlocal spell
+
+function! FileExists(pat)
+    return len(glob(a:pat, 0, 1)) > 0
+endfunction
+
+" Configure :make
+if exists('g:loaded_dispatch')
+
+    if FileExists('*.cabal')
+        nnoremap <buffer> <silent> <localleader>b :Dispatch cabal build<Cr>
+    endif
+
+endif
