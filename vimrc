@@ -42,8 +42,8 @@ endif
 
 Plugin 'junegunn/seoul256.vim'
 
-" Haskell Indenting
-Plugin 'elliottt/haskell-indent'
+" Haskell mode
+Plugin 'elliottt/vim-haskell'
 
 " Airline
 Plugin 'bling/vim-airline'

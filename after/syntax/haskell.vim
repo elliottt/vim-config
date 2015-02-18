@@ -3,7 +3,7 @@ setlocal nocindent
 setlocal expandtab
 
 setlocal include=\\s*import\\s\\+\\(qualified\\s\\+\\)\\?\\zs[^\ \\t]\\+\\ze
-setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.hs'
+setlocal includeexpr=haskell#FindImport(v:fname)
 
 highlight hsComment term=NONE ctermfg=cyan
 
@@ -36,15 +36,7 @@ setlocal omnifunc=necoghc#omnifunc
 " Spellcheck comments
 setlocal spell
 
-function! FileExists(pat)
-    return len(glob(a:pat, 0, 1)) > 0
-endfunction
-
 " Configure :make
-if exists('g:loaded_dispatch')
-
-    if FileExists('*.cabal')
-        nnoremap <buffer> <silent> <localleader>b :Dispatch cabal build<Cr>
-    endif
-
+if haskell#CabalFileExists()
+    compiler cabal-build
 endif
