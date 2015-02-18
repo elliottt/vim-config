@@ -224,7 +224,7 @@ nnoremap <Leader>U viwgU
 nnoremap <Leader>u viwgu
 
 " Grep for the word under the cursor
-nnoremap <Leader>f yiw:grep! <C-r>"<Cr>
+nnoremap <Leader>f yiw:lgrep! <C-r>"<Cr>
 
 " Swap files in one place
 set directory=$VIMHOME/swap
