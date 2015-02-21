@@ -2,9 +2,6 @@ setlocal autoindent
 setlocal nocindent
 setlocal expandtab
 
-setlocal include=\\s*import\\s\\+\\(qualified\\s\\+\\)\\?\\zs[^\ \\t]\\+\\ze
-setlocal includeexpr=haskell#FindImport(v:fname)
-
 highlight hsComment term=NONE ctermfg=cyan
 
 nnoremap <buffer> K <Nop>
@@ -40,3 +37,6 @@ setlocal spell
 if haskell#CabalFileExists()
     compiler cabal-build
 endif
+
+" Setup include and includeexpr
+call haskell#FollowImports()
