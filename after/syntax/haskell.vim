@@ -16,6 +16,7 @@ nnoremap <buffer> --\| O--<Space>\|<Space>
 " Pragmas
 nnoremap <buffer> <localleader>#l O{-# LANGUAGE  #-}<Esc>hhhi
 nnoremap <buffer> <localleader>#i O{-# INLINE  #-}<Esc>hhhi
+nnoremap <buffer> <localleader>#u i{-# UNPACK #-} <Esc>F{
 
 " Insert an import declaration
 nnoremap <buffer> <localleader>i Oimport 
@@ -40,3 +41,5 @@ endif
 
 " Setup include and includeexpr
 call haskell#FollowImports()
+
+nmap <buffer> gf <Plug>(haskell-gf)
