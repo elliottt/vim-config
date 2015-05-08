@@ -90,6 +90,8 @@ endif
 
 Plugin 'idris-hackers/idris-vim'
 
+Plugin 'mhinz/vim-sayonara'
+
 call vundle#end()
 
 " Enable filetype detection
@@ -135,18 +137,9 @@ function! Prev()
     endif
 endfunction
 
-function! Close()
-    if tabpagewinnr(tabpagenr(), '$') > 1
-        close
-    else
-        lclose
-        bdelete
-    endif
-endfunction
-
 nnoremap <silent> <C-n> :call Next()<Cr>
 nnoremap <silent> <C-p> :call Prev()<Cr>
-nnoremap <silent> <C-d> :call Close()<Cr>
+nnoremap <silent> <C-d> :Sayonara<Cr>
 
 " Fold by manually defined folds
 set foldenable
