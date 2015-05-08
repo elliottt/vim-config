@@ -1,3 +1,6 @@
 setlocal autoindent spell
 
-nnoremap <buffer> <localleader>b :VimuxRunCommand('make')<Cr>
+setlocal expandtab
+setlocal shiftwidth=2
+
+compiler tex
