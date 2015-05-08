@@ -195,6 +195,10 @@ inoremap <C-j> <Down>
 inoremap <C-f> <PageDown>
 inoremap <C-b> <PageUp>
 
+" Navigate through quickfix errors
+nnoremap <silent> [q :cprev<Return>
+nnoremap <silent> ]q :cnext<Return>
+
 " Stop entering ex mode accidentally
 nnoremap Q <NOP>
 
