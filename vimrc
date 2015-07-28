@@ -92,6 +92,8 @@ Plugin 'idris-hackers/idris-vim'
 
 Plugin 'mhinz/vim-sayonara'
 
+Plugin 'fsharp/vim-fsharp'
+
 call vundle#end()
 
 " Enable filetype detection
