@@ -22,7 +22,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " CtrlP
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<Space>'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': [ '<c-g>' ]
