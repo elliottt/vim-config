@@ -5,7 +5,7 @@ if [[ ! -d swap ]]; then
 fi
 
 if [[ ! -d bundle/Vundle.vim ]]; then
-	git clone https://github.com/gmarik/vundle.git bundle/Vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim bundle/Vundle.vim
 fi
 
-vim +BundleInstall +qa
+vim -u updaterc +BundleInstall +qa
