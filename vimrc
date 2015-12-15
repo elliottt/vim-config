@@ -128,7 +128,7 @@ nnoremap <Leader>U viwgU
 nnoremap <Leader>u viwgu
 
 " Grep for the word under the cursor
-nnoremap <Leader>f yiw:lgrep! <C-r>"<Cr>
+nnoremap <Leader>f yiw:call FindPat('<C-r>"')<Cr>
 
 " Swap files in one place
 set directory=$VIMHOME/swap
@@ -139,3 +139,10 @@ set hidden
 
 " Automatically restore the last position on reload
 autocmd BufReadPost * normal `"
+
+function FindPat(pat)
+    execute "vimgrep /" . a:pat . "/j **"
+    copen
+endfunction
+
+command -nargs=0 Todo call FindPat('\(TODO\|XXX\)')
