@@ -8,7 +8,7 @@ set rtp+=$VIMHOME/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
