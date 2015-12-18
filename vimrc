@@ -84,7 +84,7 @@ set printoptions=paper:letter
 " Completion options
 set wildmode=longest:full,list:full
 set wildmenu
-set wildignore=*.o,*.hi,*.swp,*.bc,dist/*
+set wildignore+=*.o,*.hi,*.swp,*.bc,dist/*
 
 " Colors!
 colors seoul256
@@ -127,9 +127,6 @@ vnoremap <Leader>s :sort<Cr>
 nnoremap <Leader>U viwgU
 nnoremap <Leader>u viwgu
 
-" Grep for the word under the cursor
-nnoremap <Leader>f yiw:call FindPat('<C-r>"')<Cr>
-
 " Swap files in one place
 set directory=$VIMHOME/swap
 
@@ -138,11 +135,29 @@ set directory=$VIMHOME/swap
 set hidden
 
 " Automatically restore the last position on reload
-autocmd BufReadPost * normal `"
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   execute "normal! g'\"" |
+\ endif
 
-function FindPat(pat)
-    execute "vimgrep /" . a:pat . "/j **"
-    copen
+function FindPat(pat) abort
+    let l:makeprg_bak     = &makeprg
+    let l:errorformat_bak = &errorformat
+
+    try
+        let &l:makeprg     = 'ag --vimgrep -- ' . a:pat
+        let &l:errorformat = "%f:%l:%c:%m"
+        Make
+
+    finally
+
+        let &l:makeprg     = l:makeprg_bak
+        let &l:errorformat = l:errorformat_bak
+    endtry
 endfunction
 
-command -nargs=0 Todo call FindPat('\(TODO\|XXX\)')
+command -nargs=1 Find call FindPat(<f-args>)
+command -nargs=0 Todo call FindPat('TODO\|XXX')
+
+" Grep for the word under the cursor
+nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
