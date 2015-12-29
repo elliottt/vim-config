@@ -67,14 +67,9 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-dispatch'
 
-if executable('ghc-mod')
-    Plugin 'Shougo/vimproc'
-    Plugin 'eagletmt/ghcmod-vim'
-    Plugin 'eagletmt/neco-ghc'
-endif
+Plugin 'ajh17/VimCompletesMe'
 
 Plugin 'idris-hackers/idris-vim'
 
