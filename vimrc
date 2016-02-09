@@ -87,8 +87,8 @@ set wildmenu
 set wildignore+=*.o,*.hi,*.swp,*.bc,dist/*
 
 " Colors!
+let g:seoul256_background = 239
 colors seoul256
-set bg=dark
 
 " Disable the arrow keys when in edit mode
 inoremap <Up>    <NOP>
