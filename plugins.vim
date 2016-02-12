@@ -34,7 +34,8 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'elliottt/vim-haskell'
 
 " Airline
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 if $OS != 'windows'
     if !exists('g:airline_symbols')
