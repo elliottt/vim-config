@@ -32,9 +32,10 @@ setlocal shiftwidth=2
 setlocal spell
 
 " Configure :make
-if haskell#StackYamlFileExists()
-    compiler stack-build
-elseif haskell#CabalFileExists()
+" if haskell#StackYamlFileExists()
+"     compiler stack-build
+" elseif haskell#CabalFileExists()
+if haskell#CabalFileExists()
     compiler cabal-build
 endif
 
