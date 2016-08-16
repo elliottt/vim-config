@@ -96,12 +96,6 @@ inoremap <Right> <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 
-" Enable navication in insert mode with control modifiers
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
-inoremap <C-f> <PageDown>
-inoremap <C-b> <PageUp>
-
 " Navigate through quickfix errors
 nnoremap <silent> [q :cprev<Return>
 nnoremap <silent> ]q :cnext<Return>
