@@ -1,10 +1,10 @@
-#!/bin/zsh
+#!/bin/sh
 
-if [[ ! -d swap ]]; then
+if [ ! -d swap ]; then
 	mkdir swap
 fi
 
-if [[ ! -d bundle/Vundle.vim ]]; then
+if [ ! -d bundle/Vundle.vim ]; then
 	git clone https://github.com/VundleVim/Vundle.vim bundle/Vundle.vim
 fi
 
