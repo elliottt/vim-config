@@ -124,6 +124,11 @@ nnoremap <Leader>u viwgu
 " Swap files in one place
 set directory=$VIMHOME/swap
 
+" Fix a bug with tmux-2.3 and vim-dispatch (note the trailing space)
+"
+" https://github.com/tpope/vim-dispatch/issues/192
+set shellpipe=2>&1\|\ tee\ 
+
 " Enable hidden buffers (so that switching between dirty buffers doesn't throw
 " an error)
 set hidden
