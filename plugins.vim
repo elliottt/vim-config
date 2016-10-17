@@ -33,6 +33,9 @@ Plugin 'junegunn/seoul256.vim'
 " Haskell mode
 Plugin 'elliottt/vim-haskell'
 
+" Salty mode
+Plugin 'galoisinc/vim-salty'
+
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
