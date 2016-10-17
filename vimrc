@@ -1,8 +1,8 @@
-runtime env.vim
-runtime plugins.vim
-
 let mapleader      = ","
 let maplocalleader = ";"
+
+runtime env.vim
+runtime plugins.vim
 
 set ignorecase smartcase
 
