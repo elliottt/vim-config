@@ -44,3 +44,10 @@ endif
 call haskell#FollowImports()
 
 nmap <buffer> gf <Plug>(haskell-gf)
+
+augroup haskell
+
+    autocmd!
+    autocmd BufWrite *.hs Neomake!
+
+augroup END

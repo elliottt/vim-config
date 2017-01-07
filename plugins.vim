@@ -71,7 +71,10 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-dispatch'
+
+Plugin 'neomake/neomake'
+let g:neomake_open_list = 2
 
 Plugin 'ajh17/VimCompletesMe'
 
