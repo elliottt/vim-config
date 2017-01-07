@@ -12,15 +12,25 @@ Plugin 'VundleVim/Vundle.vim'
 
 " CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
+
 let g:ctrlp_map = '<Space>'
+
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': [ '<c-g>' ]
     \ }
+
 let g:ctrlp_open_new_file = 'r'
+
 let g:ctrlp_extensions = [ 'mixed', 'quickfix', 'undo' ]
+
 let g:ctrlp_cmd = 'CtrlPMixed'
+
+" Larger CtrlP window
 let g:ctrlp_match_window = 'max:20,results:20'
+
 let g:ctrlp_mruf_relative = 1
+
+" Special mapping to search buffers
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 
 " Silver searcher integration
