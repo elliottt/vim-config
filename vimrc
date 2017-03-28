@@ -136,12 +136,14 @@ autocmd BufReadPost *
 \   execute "normal! g'\"" |
 \ endif
 
-function FindPat(pat) abort
+function FindPat(...) abort
+    let l:pat = "'" . join(a:000, '\s+') . "'"
+
     let l:makeprg_bak     = &makeprg
     let l:errorformat_bak = &errorformat
 
     try
-        let &l:makeprg     = 'ag --vimgrep -- ' . a:pat
+        let &l:makeprg     = 'ag --vimgrep -- ' . l:pat
         let &l:errorformat = "%f:%l:%c:%m"
         Make
 
@@ -152,7 +154,7 @@ function FindPat(pat) abort
     endtry
 endfunction
 
-command -nargs=1 Find call FindPat(<f-args>)
+command -nargs=* Find call FindPat(<f-args>)
 command -nargs=0 Todo call FindPat('TODO\|XXX')
 
 " Grep for the word under the cursor
