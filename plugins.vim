@@ -86,6 +86,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+Plugin 'nelstrom/vim-markdown-folding'
+let g:markdown_fold_style = 'nested'
+
 call vundle#end()
 
 " Enable filetype detection
