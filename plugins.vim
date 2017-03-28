@@ -53,8 +53,6 @@ Plugin 'neomake/neomake'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-let g:airline#extensions#tabline#fnamemod = ':t'
-
 if $OS != 'windows'
     " no fancy symbols on windows
     let g:airline_powerline_fonts = 1
