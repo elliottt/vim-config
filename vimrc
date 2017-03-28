@@ -105,9 +105,6 @@ nnoremap Q <NOP>
 
 inoremap jk <Esc>
 
-" Set F2 as the binding to toggle the paste mode
-set pastetoggle=<F2>
-
 " Use F3 to toggle spelling
 nnoremap <F3> :set spell!<CR>
 
