@@ -31,7 +31,7 @@ let g:ctrlp_match_window = 'max:20,results:20'
 let g:ctrlp_mruf_relative = 1
 
 " Special mapping to search buffers
-nnoremap <Leader><Space> :CtrlPBuffer<CR>
+nnoremap <CR> :CtrlPBuffer<CR>
 
 " Silver searcher integration
 if executable('ag')
