@@ -46,30 +46,19 @@ Plugin 'elliottt/vim-haskell'
 " Salty mode
 Plugin 'galoisinc/vim-salty'
 
+" Neomake, loaded before airline to make the plugin available
+Plugin 'neomake/neomake'
+
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-set laststatus=2
+
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 if $OS != 'windows'
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
-
-    " tabline config
-    let g:airline#extensions#tabline#enabled = 1
-
-    " empty git branch value
-    let g:airline#extensions#branch#empty_message = ' '
-
     " no fancy symbols on windows
     let g:airline_powerline_fonts = 1
-
-    " Airline output for tmux
-    " Plugin 'edkolev/tmuxline.vim'
-    " let g:tmuxline_preset = 'powerline'
 endif
-
-let g:airline_theme = 'bubblegum'
 
 " Text alignment
 Plugin 'tommcdo/vim-lion'
