@@ -72,8 +72,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 
-Plugin 'neomake/neomake'
-
 Plugin 'ajh17/VimCompletesMe'
 
 Plugin 'idris-hackers/idris-vim'

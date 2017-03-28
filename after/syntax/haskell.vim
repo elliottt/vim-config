@@ -48,6 +48,6 @@ nmap <buffer> gf <Plug>(haskell-gf)
 augroup haskell
 
     autocmd!
-    autocmd BufWrite *.hs Neomake!
+    autocmd BufWritePost *.hs Neomake!
 
 augroup END
