@@ -31,14 +31,15 @@ let g:ctrlp_match_window = 'max:20,results:20'
 let g:ctrlp_mruf_relative = 1
 
 " Special mapping to search buffers
-nnoremap <CR> :CtrlPBuffer<CR>
+nnoremap <Leader><Space> :CtrlPBuffer<CR>
 
 " Silver searcher integration
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
 
-Plugin 'junegunn/seoul256.vim'
+" Plugin 'junegunn/seoul256.vim'
+Plugin 'jnurmine/Zenburn'
 
 " Haskell mode
 Plugin 'elliottt/vim-haskell'
