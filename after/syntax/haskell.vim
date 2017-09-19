@@ -51,3 +51,8 @@ augroup haskell
     autocmd BufWritePost *.hs Neomake!
 
 augroup END
+
+if exists("g:haskell_use_unicode") && g:haskell_use_unicode == 1
+    call haskell#UnicodeMacros()
+endif
+
