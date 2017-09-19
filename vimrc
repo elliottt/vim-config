@@ -4,6 +4,8 @@ let maplocalleader = ";"
 runtime env.vim
 runtime plugins.vim
 
+runtime site-config.vim
+
 set ignorecase smartcase
 
 " Allow backspacing over everything
