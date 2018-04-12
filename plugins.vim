@@ -16,27 +16,44 @@ Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<Space>'
 
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("t")': [ '<c-g>' ]
+    \ 'AcceptSelection("t")': [ '<c-g>' ],
+    \ 'MarkToOpen()':         [ '<c-z>', '<c-t>' ]
     \ }
 
 let g:ctrlp_open_new_file = 'r'
 
 let g:ctrlp_extensions = [ 'mixed', 'quickfix', 'undo' ]
 
-let g:ctrlp_cmd = 'CtrlPMixed'
-
 " Larger CtrlP window
 let g:ctrlp_match_window = 'max:20,results:20'
 
 let g:ctrlp_mruf_relative = 1
 
+let g:ctrlp_open_multiple_files='1r'
+
 " Special mapping to search buffers
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 
-" Silver searcher integration
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
+" Special mapping to search tags
+nnoremap <LocalLeader><Space> :CtrlPTag<CR>
+
+" Silver searcher/ripgrep integration
+if executable('rg')
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_use_caching = 0
+elseif executable('ag')
+    let g:ctrlp_user_command = 'ag %s --nocolor --nogroup -g ""'
+    let g:ctrlp_use_caching = 0
 endif
+
+"let g:ctrlp_lazy_update = 100
+
+" CPSM for CtrlP
+Plugin 'nixprime/cpsm'
+
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+let g:cpsm_match_empty_query = 0
+
 
 " Plugin 'junegunn/seoul256.vim'
 Plugin 'jnurmine/Zenburn'
@@ -48,7 +65,7 @@ Plugin 'elliottt/vim-haskell'
 Plugin 'galoisinc/vim-salty'
 
 " Neomake, loaded before airline to make the plugin available
-Plugin 'neomake/neomake'
+" Plugin 'neomake/neomake'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -87,6 +104,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 Plugin 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
+
+Plugin 'vhda/verilog_systemverilog.vim'
 
 call vundle#end()
 

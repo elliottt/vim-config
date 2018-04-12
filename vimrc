@@ -104,6 +104,12 @@ inoremap <Left>  <NOP>
 nnoremap <silent> [q :cprev<Return>
 nnoremap <silent> ]q :cnext<Return>
 
+" Navigate through the location list
+nnoremap <silent> [l :lprev<Return>
+nnoremap <silent> ]l :lnext<Return>
+
+nnoremap <silent> <leader>t :exec ("ltag " . expand("<cword>"))<CR>
+
 " Stop entering ex mode accidentally
 nnoremap Q <NOP>
 
@@ -140,26 +146,42 @@ autocmd BufReadPost *
 \   execute "normal! g'\"" |
 \ endif
 
-function FindPat(...) abort
-    let l:pat = "'" . join(a:000, '\s+') . "'"
+let g:find_fun = ''
+if executable('rg')
+    let g:find_fun = 'rg --vimgrep -- '
+elseif executable('ag')
+    let g:find_fun = 'ag --vimgrep -- '
+endif
 
-    let l:makeprg_bak     = &makeprg
-    let l:errorformat_bak = &errorformat
+if g:find_fun != ''
+    function FindPat(...) abort
+        let l:pat = "'" . join(a:000, '\s+') . "'"
 
-    try
-        let &l:makeprg     = 'ag --vimgrep -- ' . l:pat
-        let &l:errorformat = "%f:%l:%c:%m"
-        Make
+        let l:makeprg_bak     = &makeprg
+        let l:errorformat_bak = &errorformat
 
-    finally
+        try
+            let &l:makeprg     = g:find_fun . l:pat
+            let &l:errorformat = "%f:%l:%c:%m"
+            Make
 
-        let &l:makeprg     = l:makeprg_bak
-        let &l:errorformat = l:errorformat_bak
-    endtry
-endfunction
+        finally
+
+            let &l:makeprg     = l:makeprg_bak
+            let &l:errorformat = l:errorformat_bak
+        endtry
+    endfunction
+else
+    function FindPat(...) abort
+    endfunction
+end
+
 
 command -nargs=* Find call FindPat(<f-args>)
 command -nargs=0 Todo call FindPat('TODO\|XXX')
 
 " Grep for the word under the cursor
 nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
+
+" Search upwards for tag files
+set tags=./tags,tags;

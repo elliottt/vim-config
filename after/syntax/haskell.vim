@@ -45,14 +45,29 @@ call haskell#FollowImports()
 
 nmap <buffer> gf <Plug>(haskell-gf)
 
-augroup haskell
-
-    autocmd!
-    autocmd BufWritePost *.hs Neomake!
-
-augroup END
+" augroup haskell
+"     autocmd!
+"     autocmd BufWritePost *.hs Neomake!
+" augroup END
 
 if exists("g:haskell_use_unicode") && g:haskell_use_unicode == 1
     call haskell#UnicodeMacros()
 endif
 
+let g:autotagCtagsCmd='hasktags'
+
+" " enable fast-tags support, if the executable is present
+" if executable('fast-tags')
+"     function UpdateTags(file)
+"         let l:tagfile=findfile('tags', '.;')
+"         if l:tagfile != ""
+"             !exe "echom !fast-tags -o " . shellescape(l:tagfile) . " " . shellescape(a:file)
+"         else
+"             !exe "echom !fast-tags " . shellescape(a:file)
+"         endif
+"     endfunction
+
+"     augroup tags
+"         au BufWritePost *.hs :call UpdateTags(expand("%"))
+"     augroup END
+" endif
