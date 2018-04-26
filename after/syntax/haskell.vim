@@ -58,14 +58,7 @@ let g:autotagCtagsCmd='hasktags'
 
 " enable fast-tags support, if the executable is present
 if executable('fast-tags')
-    function UpdateTags(file)
-        let l:tagfile=findfile('tags', '.;')
-        if l:tagfile != ""
-            exe "silent !fast-tags -o " . shellescape(l:tagfile) . " " . shellescape(a:file)
-        endif
-    endfunction
-
     augroup tags
-        au BufWritePost *.hs :call UpdateTags(expand("%"))
+        au BufWritePost *.hs :call haskell#UpdateFastTags(expand("%"))
     augroup END
 endif
