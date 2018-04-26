@@ -185,3 +185,17 @@ nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
 
 " Search upwards for tag files
 set tags=./tags,tags;
+
+
+" Autocommand Groups {{{
+
+augroup tags
+
+    " enable fast-tags support, if the executable is present
+    if executable('fast-tags')
+        au BufWritePost *.hs :call haskell#UpdateFastTags(expand("%"))
+    endif
+
+augroup END
+
+" Autocommand Groups }}}

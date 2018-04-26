@@ -53,12 +53,3 @@ nmap <buffer> gf <Plug>(haskell-gf)
 if exists("g:haskell_use_unicode") && g:haskell_use_unicode == 1
     call haskell#UnicodeMacros()
 endif
-
-let g:autotagCtagsCmd='hasktags'
-
-" enable fast-tags support, if the executable is present
-if executable('fast-tags')
-    augroup tags
-        au BufWritePost *.hs :call haskell#UpdateFastTags(expand("%"))
-    augroup END
-endif
