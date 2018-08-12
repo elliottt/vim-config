@@ -1,4 +1,5 @@
 
+" {{{ Vundle Setup
 set nocompatible
 
 " Setup plugins
@@ -7,10 +8,10 @@ filetype off
 set rtp+=$VIMHOME/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle
 Plugin 'VundleVim/Vundle.vim'
+" }}}
 
-" CtrlP
+" {{{ CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
 
 let g:ctrlp_map = '<Space>'
@@ -48,26 +49,30 @@ endif
 
 "let g:ctrlp_lazy_update = 100
 
-" CPSM for CtrlP
-Plugin 'nixprime/cpsm'
+" {{{ CPSM for CtrlP (when not on windows)
+if $OS != 'windows'
+    Plugin 'nixprime/cpsm'
 
-let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
-let g:cpsm_match_empty_query = 0
+    let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+    let g:cpsm_match_empty_query = 0
+end
+" }}}
+" }}}
 
-
+" {{{ Color Themes
 " Plugin 'junegunn/seoul256.vim'
 Plugin 'jnurmine/Zenburn'
+" }}}
 
-" Haskell mode
+" {{{ Haskell
 Plugin 'elliottt/vim-haskell'
+" }}}
 
-" Salty mode
+" {{{ Salty
 Plugin 'galoisinc/vim-salty'
+" }}}
 
-" Neomake, loaded before airline to make the plugin available
-" Plugin 'neomake/neomake'
-
-" Airline
+" {{{ Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -75,39 +80,54 @@ if $OS != 'windows'
     " no fancy symbols on windows
     let g:airline_powerline_fonts = 1
 endif
+" }}}
 
-" Text alignment
+" {{{ Text alignment
 Plugin 'tommcdo/vim-lion'
+" }}}
 
-" Tmux integration
+" {{{ Tmux integration
 Plugin 'benmills/vimux'
+" }}}
 
+" {{{ tpope plugins
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
+" }}}
 
+" {{{ Simple auto-completion
 Plugin 'ajh17/VimCompletesMe'
+" }}}
 
-Plugin 'idris-hackers/idris-vim'
-
+" {{{ Sayonara
 Plugin 'mhinz/vim-sayonara'
+" }}}
 
-Plugin 'fsharp/vim-fsharp'
+" {{{ ultisnips (if built with python)
+if has('python')
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    " let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+endif
+" }}}
 
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
+" {{{ Markdown
 Plugin 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
+" }}}
 
+" {{{ System-verilog
 Plugin 'vhda/verilog_systemverilog.vim'
+" }}}
 
+" {{{ Vundle cleanup
 call vundle#end()
 
 " Enable filetype detection
 filetype plugin indent on
+" }}}
