@@ -41,10 +41,10 @@ nnoremap <LocalLeader><Space> :CtrlPTag<CR>
 " Silver searcher/ripgrep integration
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
 elseif executable('ag')
     let g:ctrlp_user_command = 'ag %s --nocolor --nogroup -g ""'
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
 endif
 
 "let g:ctrlp_lazy_update = 100
