@@ -32,6 +32,9 @@ let g:ctrlp_mruf_relative = 1
 
 let g:ctrlp_open_multiple_files='1r'
 
+" Start indexing from the current working directory
+let g:ctrlp_working_path_mode = 'w'
+
 " Special mapping to search buffers
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 
