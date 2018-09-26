@@ -6,7 +6,7 @@ set nocompatible
 filetype off
 
 set rtp+=$VIMHOME/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin($VIMHOME . '/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
 " }}}
@@ -50,8 +50,11 @@ endif
 "let g:ctrlp_lazy_update = 100
 
 " {{{ CPSM for CtrlP (when not on windows)
-if $OS != 'windows' && !has("nvim")
+if $OS != 'windows'
     Plugin 'nixprime/cpsm'
+
+    " NOTE: for this to work in neovim, the `neovim` python module must be
+    " installed. `pip3 install --user neovim`
 
     let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
     let g:cpsm_match_empty_query = 0
