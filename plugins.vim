@@ -50,7 +50,7 @@ endif
 "let g:ctrlp_lazy_update = 100
 
 " {{{ CPSM for CtrlP (when not on windows)
-if $OS != 'windows'
+if $OS != 'windows' && !has("nvim")
     Plugin 'nixprime/cpsm'
 
     let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
