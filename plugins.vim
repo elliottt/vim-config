@@ -113,7 +113,7 @@ Plugin 'mhinz/vim-sayonara'
 " }}}
 
 " {{{ ultisnips (if built with python)
-if has('python')
+if has('python') || (has('nvim') && $OS != "Windows")
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
     let g:UltiSnipsExpandTrigger="<tab>"
