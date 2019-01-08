@@ -68,6 +68,7 @@ end
 " {{{ Color Themes
 " Plugin 'junegunn/seoul256.vim'
 Plugin 'jnurmine/Zenburn'
+let g:zenburn_transparent = 1
 " }}}
 
 " {{{ Haskell
@@ -114,9 +115,9 @@ Plugin 'mhinz/vim-sayonara'
 
 " {{{ ultisnips (if built with python)
 if has('python') || (has('nvim') && $OS != "Windows")
-    Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
-    let g:UltiSnipsExpandTrigger="<tab>"
+    " Plugin 'SirVer/ultisnips'
+    " Plugin 'honza/vim-snippets'
+    " let g:UltiSnipsExpandTrigger="<tab>"
     " let g:UltiSnipsJumpForwardTrigger="<c-b>"
     " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 endif
