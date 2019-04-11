@@ -75,10 +75,6 @@ let g:zenburn_transparent = 1
 Plugin 'elliottt/vim-haskell'
 " }}}
 
-" {{{ Salty
-Plugin 'galoisinc/vim-salty'
-" }}}
-
 " {{{ Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -113,23 +109,9 @@ Plugin 'ajh17/VimCompletesMe'
 Plugin 'mhinz/vim-sayonara'
 " }}}
 
-" {{{ ultisnips (if built with python)
-if has('python') || (has('nvim') && $OS != "Windows")
-    " Plugin 'SirVer/ultisnips'
-    " Plugin 'honza/vim-snippets'
-    " let g:UltiSnipsExpandTrigger="<tab>"
-    " let g:UltiSnipsJumpForwardTrigger="<c-b>"
-    " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-endif
-" }}}
-
 " {{{ Markdown
 Plugin 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
-" }}}
-
-" {{{ System-verilog
-Plugin 'vhda/verilog_systemverilog.vim'
 " }}}
 
 " {{{ Vundle cleanup
