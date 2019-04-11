@@ -65,6 +65,10 @@ end
 " }}}
 " }}}
 
+" ALE {{{
+Plugin 'w0rp/ale'
+" }}}
+
 " {{{ Color Themes
 " Plugin 'junegunn/seoul256.vim'
 Plugin 'jnurmine/Zenburn'
