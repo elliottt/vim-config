@@ -56,7 +56,7 @@ endif
 if $OS != 'windows'
     Plugin 'nixprime/cpsm'
 
-    " NOTE: for this to work in neovim, the `neovim` python module must be
+    " NOTE: for this to work in neovim, the `pynvim` python module must be
     " installed. `pip3 install --user neovim`
 
     let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
