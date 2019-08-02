@@ -1,0 +1,28 @@
+// vim: et ts=2 sw=2
+{
+  "languageserver": {
+    "clangd": {
+      "command": "/usr/local/Cellar/llvm@7/7.0.1/bin/clangd",
+      "rootPatterns": [
+        "WORKSPACE",
+        "compile_flags.json",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    },
+    "sorbet": {
+      "command": "~/stripe/sorbet/bazel-bin/main/sorbet",
+      "args": ["--lsp", "--enable-lsp-all", "--silence-dev-message", "."],
+      "rootPatterns": [
+        "WORKSPACE",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": ["ruby"]
+    }
+  }
+}

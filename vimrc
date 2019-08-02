@@ -29,6 +29,9 @@ nnoremap <silent> <Leader><Leader> :noh<Enter>
 " Always show cursor position
 set ruler
 
+" Always reload modified files
+set autoread
+
 " Tab/buffer navigation
 function! Next()
     if tabpagenr('$') > 1
@@ -95,10 +98,10 @@ colors zenburn
 set background=dark
 
 " Disable the arrow keys when in edit mode
-inoremap <Up>    <NOP>
-inoremap <Right> <NOP>
-inoremap <Down>  <NOP>
-inoremap <Left>  <NOP>
+" inoremap <Up>    <NOP>
+" inoremap <Right> <NOP>
+" inoremap <Down>  <NOP>
+" inoremap <Left>  <NOP>
 
 " Navigate through quickfix errors
 nnoremap <silent> [q :cprev<Return>

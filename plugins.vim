@@ -1,18 +1,16 @@
 
-" {{{ Vundle Setup
+" {{{ vim-plug Setup
 set nocompatible
 
 " Setup plugins
 filetype off
 
-set rtp+=$VIMHOME/bundle/Vundle.vim
-call vundle#begin($VIMHOME . '/bundle')
-
-Plugin 'VundleVim/Vundle.vim'
+set rtp+=$VIMHOME/bundle/vim-plug
+call plug#begin($VIMHOME . '/bundle')
 " }}}
 
 " {{{ CtrlP
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 let g:ctrlp_map = '<Space>'
 
@@ -54,7 +52,7 @@ endif
 
 " {{{ CPSM for CtrlP (when not on windows)
 if $OS != 'windows'
-    Plugin 'nixprime/cpsm'
+    Plug 'nixprime/cpsm'
 
     " NOTE: for this to work in neovim, the `pynvim` python module must be
     " installed. `pip3 install --user neovim`
@@ -65,23 +63,23 @@ end
 " }}}
 " }}}
 
-" ALE {{{
-Plugin 'w0rp/ale'
+" coc.nvim {{{
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " }}}
 
 " {{{ Color Themes
-" Plugin 'junegunn/seoul256.vim'
-Plugin 'jnurmine/Zenburn'
+" Plug 'junegunn/seoul256.vim'
+Plug 'jnurmine/Zenburn'
 let g:zenburn_transparent = 1
 " }}}
 
 " {{{ Haskell
-Plugin 'elliottt/vim-haskell'
+Plug 'elliottt/vim-haskell'
 " }}}
 
 " {{{ Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 if $OS != 'windows'
     " no fancy symbols on windows
@@ -90,36 +88,32 @@ endif
 " }}}
 
 " {{{ Text alignment
-Plugin 'tommcdo/vim-lion'
+Plug 'tommcdo/vim-lion'
 " }}}
 
 " {{{ Tmux integration
-Plugin 'benmills/vimux'
+Plug 'benmills/vimux'
 " }}}
 
 " {{{ tpope plugins
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-dispatch'
-" }}}
-
-" {{{ Simple auto-completion
-Plugin 'ajh17/VimCompletesMe'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
 " }}}
 
 " {{{ Sayonara
-Plugin 'mhinz/vim-sayonara'
+Plug 'mhinz/vim-sayonara'
 " }}}
 
 " {{{ Markdown
-Plugin 'nelstrom/vim-markdown-folding'
+Plug 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
 " }}}
 
-" {{{ Vundle cleanup
-call vundle#end()
+" {{{ vim-plug cleanup
+call plug#end()
 
 " Enable filetype detection
 filetype plugin indent on
