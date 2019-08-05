@@ -2,7 +2,7 @@
 {
   "languageserver": {
     "clangd": {
-      "command": "/usr/local/Cellar/llvm@7/7.0.1/bin/clangd",
+      "command": "/usr/local/Cellar/llvm/8.0.0_1/bin/clangd",
       "rootPatterns": [
         "WORKSPACE",
         "compile_flags.json",
