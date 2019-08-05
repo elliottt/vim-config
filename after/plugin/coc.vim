@@ -9,8 +9,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" triggers completion
-inoremap <silent><expr> <tab> coc#refresh()
+
+" triggers completion when the character to the left is not space or the start
+" of a column.
+inoremap <silent><expr> <tab> <SID>check_back_space() ? "<TAB>" : coc#refresh()
+
+" Returns true when the character to the left of the cursor is the start of the
+" row, or whitespace.
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " selects a completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
