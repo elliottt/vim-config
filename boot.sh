@@ -1,5 +1,12 @@
 #!/bin/bash
 
+coc_plugins=(coc-rls)
+
+if [[ "$1" == "-n" ]]; then
+  VIM="nvim"
+else
+  VIM="vim"
+fi
 
 if [ ! -d swap ]; then
 	mkdir swap
@@ -16,8 +23,10 @@ if [ ! -d bundle/vim-plug ]; then
 	git clone https://github.com/junegunn/vim-plug bundle/vim-plug
 fi
 
-if [ "$1" = "-n" ]; then
-  nvim -u updaterc +PlugInstall +qa
-else
-  vim -u updaterc +PlugInstall +qa
-fi
+coc_plugins=(coc-rls)
+
+"$VIM" -u updaterc +PlugInstall +qa
+
+for plugin in $coc_plugins; do
+  "$VIM" -u updaterc "+CocInstall ${plugin}" +qa
+done
