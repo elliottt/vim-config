@@ -25,3 +25,6 @@ endfunction
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 command! -nargs=0 Format :call CocAction('format')
+
+" Show all diagonistic messages
+nnoremap <silent> <LocalLeader>d :<C-u>CocList diagnostics<cr>
