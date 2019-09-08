@@ -9,7 +9,7 @@ else
 fi
 
 if [ ! -d swap ]; then
-	mkdir swap
+  mkdir swap
 fi
 
 mkdir -p autoload
@@ -20,7 +20,7 @@ curl -fLo autoload/plug.vim \
 mkdir -p bundle
 
 if [ ! -d bundle/vim-plug ]; then
-	git clone https://github.com/junegunn/vim-plug bundle/vim-plug
+  git clone https://github.com/junegunn/vim-plug bundle/vim-plug
 fi
 
 coc_plugins=(coc-rls)
