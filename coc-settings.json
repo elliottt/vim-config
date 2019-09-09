@@ -1,31 +1,36 @@
 // vim: et ts=2 sw=2
 {
+  "suggest": {
+    "autoTrigger": "always"
+  },
+  "list.normalMappings": {
+    "<C-j>": "do:next",
+    "<C-k>": "do:previous"
+  },
   "languageserver": {
     "clangd": {
-      "command": "/usr/local/Cellar/llvm/8.0.0_1/bin/clangd",
+      "command": "/usr/local/opt/llvm/bin/clangd",
       "rootPatterns": [
         "WORKSPACE",
         "compile_flags.json",
         "compile_commands.json",
-        ".vim/",
         ".git/",
         ".hg/"
       ],
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
-    "sorbet": {
-      "command": "~/stripe/sorbet/bazel-bin/main/sorbet",
-      "args": ["--lsp", "--enable-lsp-all", "--silence-dev-message", "."],
+
+    "sorbet-pay-server": {
+      "command": "pay",
+      "args": ["exec", "scripts/bin/typecheck", "--lsp"],
       "rootPatterns": [
-        "WORKSPACE",
-        ".vim/",
-        ".git/",
-        ".hg/"
+        "stripe/pay-server"
       ],
       "filetypes": ["ruby"]
     }
   },
-
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.hoverTarget": "float",
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"
   ]
