@@ -36,9 +36,6 @@ let g:ctrlp_working_path_mode = 'w'
 " Special mapping to search buffers
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 
-" Special mapping to search tags
-nnoremap <LocalLeader><Space> :CtrlPTag<CR>
-
 " Silver searcher/ripgrep integration
 if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
