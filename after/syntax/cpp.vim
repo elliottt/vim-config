@@ -5,13 +5,9 @@ augroup END
 
 " Set a breakpoint
 function! SetBreakPoint(...)
-    let l:cmd = ""
-    for arg in a:000
-        let cmd = l:cmd." ".arg
-    endfor
-
-    let l:line = line(".")
-    let l:file = expand("%")
+    let cmd = join(a:000, ' ')
+    let line = line(".")
+    let file = expand("%")
     if strlen(l:cmd) > 0
         VimuxRunCommand('break set --file '.l:file.' --line '.l:line.' -C "' . l:cmd . '"')
     else
