@@ -1,7 +1,7 @@
 
 let g:LanguageClient_serverCommands = {
             \ 'cpp': ['/usr/local/opt/llvm/bin/clangd'],
-            \ 'rust': ['cargo', 'run', 'rls'],
+            \ 'rust': ['rustup', 'run', 'stable', 'rls'],
             \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp'],
             \ }
 
