@@ -60,8 +60,11 @@ end
 " }}}
 " }}}
 
-" coc.nvim {{{
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" LanguageClient-neovom {{{
+Plug 'autozimu/LanguageClient-neovim', {
+            \ 'branch': 'next',
+            \ 'do': 'bash install.sh',
+            \ }
 " }}}
 
 " {{{ Color Themes
@@ -109,9 +112,7 @@ Plug 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
 " }}}
 
-" {{{ vim-plug cleanup
+" {{{ Initialize plugins
 call plug#end()
-
-" Enable filetype detection
-filetype plugin indent on
+filetype on
 " }}}
