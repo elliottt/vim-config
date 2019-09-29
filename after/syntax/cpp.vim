@@ -1,6 +1,6 @@
 augroup cpp
     " Format before write
-    au BufWritePre *.cc call CocAction('format')
+    au BufWritePre *.cc call LanguageClient#textDocument_formatting()
 augroup END
 
 " Set a breakpoint
