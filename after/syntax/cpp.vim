@@ -1,8 +1,3 @@
-augroup cpp
-    " Format before write
-    au BufWritePre *.cc call LanguageClient#textDocument_formatting()
-augroup END
-
 " Set a breakpoint
 function! SetBreakPoint(...)
     let cmd = join(a:000, ' ')
@@ -16,6 +11,8 @@ function! SetBreakPoint(...)
 endfunction
 
 command! -nargs=* Break call SetBreakPoint(expand("<args>"))
+
+setlocal signcolumn=yes
 
 nnoremap <silent><buffer> <LocalLeader>b :Break<cr>
 nnoremap <silent><buffer> <LocalLeader>r :call VimuxRunCommand("run")<cr>

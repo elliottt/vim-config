@@ -189,7 +189,6 @@ nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
 " Search upwards for tag files
 set tags=./tags,tags;
 
-
 " Autocommand Groups {{{
 
 augroup tags
