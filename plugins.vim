@@ -12,7 +12,7 @@ call plug#begin($VIMHOME . '/bundle')
 " LanguageClient-neovom {{{
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
-            \ 'do': 'bash install.sh',
+            \ 'do': 'make release',
             \ }
 " }}}
 
