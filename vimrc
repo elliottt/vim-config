@@ -178,9 +178,18 @@ else
     endfunction
 end
 
-
 command -nargs=* Find call FindPat(<f-args>)
 command -nargs=0 Todo call FindPat('TODO\|XXX')
+
+function! s:fancy_man(...)
+    autocmd! User GoyoLeave :qa!
+
+    call superman#SuperMan(a:1)
+    Goyo
+endfunction
+
+command -nargs=1 FancyMan call s:fancy_man(<f-args>)
+
 
 " Grep for the word under the cursor
 nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
