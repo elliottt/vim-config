@@ -22,9 +22,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 
 " {{{ Color Themes
-" Plug 'junegunn/seoul256.vim'
-Plug 'jnurmine/Zenburn'
-let g:zenburn_transparent = 1
+Plug 'junegunn/seoul256.vim'
 " }}}
 
 " {{{ Haskell
@@ -64,6 +62,12 @@ Plug 'mhinz/vim-sayonara'
 " {{{ Markdown
 Plug 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
+" }}}
+
+" {{{ Editing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'jez/vim-superman'
 " }}}
 
 " {{{ Initialize plugins

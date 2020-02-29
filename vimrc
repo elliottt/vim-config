@@ -93,8 +93,7 @@ set wildignore+=*.o,*.hi,*.swp,*.bc,dist/*
 
 " Colors!
 " let g:seoul256_background = 239
-" colors seoul256
-colors zenburn
+colors seoul256
 set background=dark
 
 " Disable the arrow keys when in edit mode
