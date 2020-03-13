@@ -9,6 +9,10 @@ set rtp+=$VIMHOME/bundle/vim-plug
 call plug#begin($VIMHOME . '/bundle')
 " }}}
 
+" two-trucs {{{
+Plug 'elliottt/two-trucs', { 'do': 'make release' }
+" }}}
+
 " LanguageClient-neovom {{{
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',

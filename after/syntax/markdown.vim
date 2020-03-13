@@ -1,5 +1,5 @@
 setlocal nofoldenable
 setlocal spell
 
-nnoremap <localleader>l o<Esc>80R-<Esc>0
-nnoremap <localleader>L o<Esc>80R=<Esc>0
+nnoremap <silent> <LocalLeader>n :TTNext<cr>
+nnoremap <silent> <LocalLeader>s :TTSort<cr>
