@@ -92,7 +92,7 @@ set wildmenu
 set wildignore+=*.o,*.hi,*.swp,*.bc,dist/*
 
 " Colors!
-" let g:seoul256_background = 239
+let g:seoul256_background = 233
 colors seoul256
 set background=dark
 
@@ -148,6 +148,8 @@ autocmd BufReadPost *
 \   execute "normal! g'\"" |
 \ endif
 
+
+" Use ripgrep or the_silver_searcher when available
 let g:find_fun = ''
 if executable('rg')
     let g:find_fun = 'rg --vimgrep -- '
@@ -155,28 +157,6 @@ elseif executable('ag')
     let g:find_fun = 'ag --vimgrep -- '
 endif
 
-if g:find_fun != ''
-    function FindPat(...) abort
-        let l:pat = "'" . join(a:000, '\s+') . "'"
-
-        let l:makeprg_bak     = &makeprg
-        let l:errorformat_bak = &errorformat
-
-        try
-            let &l:makeprg     = g:find_fun . l:pat
-            let &l:errorformat = "%f:%l:%c:%m"
-            Make
-
-        finally
-
-            let &l:makeprg     = l:makeprg_bak
-            let &l:errorformat = l:errorformat_bak
-        endtry
-    endfunction
-else
-    function FindPat(...) abort
-    endfunction
-end
 
 command -nargs=* Find call FindPat(<f-args>)
 command -nargs=0 Todo call FindPat('TODO\|XXX')

@@ -5,7 +5,7 @@ let g:LanguageClient_serverCommands = {
             \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp', '--enable-experimental-lsp-quick-fix'],
             \ }
 
-let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useVirtualText = "No"
 
 let g:LanguageClient_hoverPreview = "Always"
 

@@ -14,6 +14,9 @@ command! -nargs=* Break call SetBreakPoint(expand("<args>"))
 
 setlocal signcolumn=yes
 
+" Wrap the line at 120 characters
+set textwidth=120
+
 nnoremap <silent><buffer> <LocalLeader>b :Break<cr>
 nnoremap <silent><buffer> <LocalLeader>r :call VimuxRunCommand("run")<cr>
 nnoremap <silent><buffer> <LocalLeader>u :call VimuxRunCommand("up")<cr>
