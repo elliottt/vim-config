@@ -25,10 +25,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " }}}
 
-" vim-clap {{{
-Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
-" }}}
-
 " {{{ Color Themes
 Plug 'junegunn/seoul256.vim'
 " }}}
