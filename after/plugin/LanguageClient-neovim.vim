@@ -1,9 +1,16 @@
 
 let g:LanguageClient_serverCommands = {
-            \ 'cpp': ['/usr/local/opt/llvm/bin/clangd'],
+            \ 'cpp': ['/usr/bin/clangd'],
             \ 'rust': ['rustup', 'run', 'stable', 'rls'],
-            \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp', '--enable-experimental-lsp-quick-fix'],
+            \ 'ruby': ['pay', 'exec', 'scripts/bin/typecheck', '--lsp'],
             \ }
+
+if filereadable("./compile_commands.json")
+  let clangd = glob('bazel-*/external/llvm_toolchain/bin/clangd', 0, 1)
+  if len(clangd) == 1
+    let g:LanguageClient_serverCommands.cpp = [clangd[0]]
+  endif
+endif
 
 let g:LanguageClient_useVirtualText = "No"
 
