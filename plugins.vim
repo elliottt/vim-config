@@ -16,7 +16,7 @@ Plug 'elliottt/two-trucs', { 'do': 'make release' }
 " LanguageClient-neovom {{{
 Plug 'autozimu/LanguageClient-neovim', {
             \ 'branch': 'next',
-            \ 'do': 'make release',
+            \ 'do': 'bash install.sh',
             \ }
 " }}}
 
