@@ -69,8 +69,7 @@ if has("spell")
     set nospell
 endif
 
-" Highlight lines longer than 80 chars
-let w:m80=matchadd('ErrorMsg', '\%>80v.\+', -1)
+set colorcolumn=+1
 
 " Wrap the line at 80 characters
 set textwidth=80

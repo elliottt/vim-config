@@ -24,6 +24,8 @@ nnoremap <buffer> <localleader>i Oimport
 " Reload in ghci in a separate tmux pane
 nnoremap <buffer> <silent> <localleader>r :call VimuxRunCommand(':r')<Cr>
 
+setlocal textwidth=80
+
 " Set the tab size
 setlocal tabstop=8
 setlocal shiftwidth=2
