@@ -147,19 +147,6 @@ autocmd BufReadPost *
 \   execute "normal! g'\"" |
 \ endif
 
-
-" Use ripgrep or the_silver_searcher when available
-let g:find_fun = ''
-if executable('rg')
-    let g:find_fun = 'rg --vimgrep -- '
-elseif executable('ag')
-    let g:find_fun = 'ag --vimgrep -- '
-endif
-
-
-command -nargs=* Find call FindPat(<f-args>)
-command -nargs=0 Todo call FindPat('TODO\|XXX')
-
 function! s:fancy_man(...)
     autocmd! User GoyoLeave :qa!
 
@@ -168,10 +155,6 @@ function! s:fancy_man(...)
 endfunction
 
 command -nargs=1 FancyMan call s:fancy_man(<f-args>)
-
-
-" Grep for the word under the cursor
-nnoremap <silent> <Leader>f yiw:Find '<C-r>"'<Cr>
 
 " Search upwards for tag files
 set tags=./tags,tags;
